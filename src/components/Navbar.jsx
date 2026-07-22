@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone, Instagram, MessageCircle, Facebook } from "lucide-react";
+import { Menu, X, Phone, Instagram, MessageCircle, Facebook, ChevronDown } from "lucide-react";
+import { regionen } from "@/data/gesichtsbehandlungRegionen";
 
 const navLinks = [
   { label: "Startseite", href: "/#hero" },
@@ -19,6 +20,8 @@ const socialLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [regionsOpen, setRegionsOpen] = useState(false);
+  const [mobileRegionsOpen, setMobileRegionsOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -41,6 +44,26 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <div
+            className="relative"
+            onMouseEnter={() => setRegionsOpen(true)}
+            onMouseLeave={() => setRegionsOpen(false)}
+          >
+            <button className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-rose-gold ${scrolled ? "text-rose-ink" : "text-white/90"}`}>
+              Regionen <ChevronDown className="w-3.5 h-3.5" />
+            </button>
+            {regionsOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
+                <div className="glass shadow-luxe rounded-lg p-3 grid grid-cols-2 gap-1 w-72 animate-fade-in">
+                  {regionen.map((r) => (
+                    <Link key={r.slug} to={`/gesichtsbehandlung/${r.slug}`} className="px-3 py-2 rounded-sm text-sm text-rose-ink hover:bg-rose-gold hover:text-white transition-colors">
+                      {r.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
@@ -74,6 +97,20 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <div>
+              <button onClick={() => setMobileRegionsOpen(!mobileRegionsOpen)} className="flex items-center justify-between w-full text-rose-ink font-medium hover:text-rose-gold transition-colors">
+                Regionen <ChevronDown className={`w-4 h-4 transition-transform ${mobileRegionsOpen ? "rotate-180" : ""}`} />
+              </button>
+              {mobileRegionsOpen && (
+                <div className="grid grid-cols-2 gap-2 mt-3 animate-fade-in">
+                  {regionen.map((r) => (
+                    <Link key={r.slug} to={`/gesichtsbehandlung/${r.slug}`} onClick={() => setOpen(false)} className="text-rose-ink/70 text-sm hover:text-rose-gold transition-colors">
+                      {r.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
             <div className="flex items-center gap-3 pt-4 border-t border-rose-nude">
               {socialLinks.map((s) => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}

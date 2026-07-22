@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, MessageCircle, Phone, MapPin, Mail } from "lucide-react";
+import { regionen } from "@/data/gesichtsbehandlungRegionen";
 
 export default function Footer() {
   return (
     <footer className="bg-rose-ink text-white/80">
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-1">
             <h3 className="font-heading font-bold text-xl text-white mb-4">
               Daniela<span className="text-rose-light"> Beauty</span> World
@@ -37,6 +38,17 @@ export default function Footer() {
               <li><a href="/#treatments" className="hover:text-rose-light transition-colors">Behandlungen</a></li>
               <li><a href="/#gallery" className="hover:text-rose-light transition-colors">Galerie</a></li>
               <li><a href="/#contact" className="hover:text-rose-light transition-colors">Kontakt</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-heading font-semibold text-white mb-4 text-sm uppercase tracking-wider">Regionen</h4>
+            <ul className="space-y-3 text-sm">
+              {regionen.map((r) => (
+                <li key={r.slug}>
+                  <Link to={`/gesichtsbehandlung/${r.slug}`} className="hover:text-rose-light transition-colors">{r.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 
