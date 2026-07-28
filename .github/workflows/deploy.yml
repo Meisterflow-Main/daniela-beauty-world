@@ -48,4 +48,4 @@ jobs:
       - name: Done
         run: echo "Deployment completed successfully."
 
-        #Deploying with correct port 22
+        #Deploying using self-hosted runners.
