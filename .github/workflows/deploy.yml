@@ -2,8 +2,7 @@ name: Deploy to HostFactory (Staging)
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 concurrency:
   group: staging
@@ -14,54 +13,36 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NODE_ENV: production
       VITE_BASE44_APP_BASE_URL: ${{ secrets.VITE_BASE44_APP_BASE_URL }}
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      - name: Show Node and npm versions
-        run: |
-          node -v
-          npm -v
+      - name: Install dependencies
+        run: npm install
 
-      - name: Verify project files
-        run: |
-          pwd
-          ls -la
-          test -f package.json || (echo "package.json not found!" && exit 1)
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Verify Vite installation
-        run: npx vite --version
-
-      - name: Build Project
+      - name: Build the site
         run: npm run build
 
-      - name: Verify Build Output
-        run: |
-          test -d dist || (echo "dist folder not found!" && exit 1)
-          ls -lah dist
+      - name: Verify build output
+        run: ls -la dist
 
-      - name: Deploy to HostFactory
-        uses: appleboy/scp-action@v0.1.7
+      - name: Deploy via rsync over SSH
+        uses: burnett01/rsync-deployments@7.0.1
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT }}
-          source: "dist/*"
-          target: ${{ secrets.DEPLOY_PATH }}
-          strip_components: 1
+          switches: -avzr --delete
+          path: dist/
+          remote_path: ${{ secrets.DEPLOY_PATH }}
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_user: ${{ secrets.SSH_USER }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Deployment Complete
-        run: echo "✅ Deployment Successful"
+      - name: Done
+        run: echo "Deployment completed successfully."
