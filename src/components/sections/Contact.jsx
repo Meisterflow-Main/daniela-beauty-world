@@ -2,7 +2,7 @@ import { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Phone, Mail, MapPin, MessageCircle, Send, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 
-const WEBHOOK_URL = "https://app.meisterflow.ch/api/webhooks/enquiries/a902bb23d7e98901900e3750083b670344a14683633ae15f";
+const WEBHOOK_URL = "https://app.meisterflow.ch/api/webhooks/enquiries/55e2ba5aedc50c8b054e381fe1886865c1214c1a7ead71c5";
 
 export default function Contact() {
   const [status, setStatus] = useState("idle");
