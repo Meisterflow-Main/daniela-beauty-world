@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import CookieBanner from "@/components/CookieBanner";
 import Hero from "@/components/sections/Hero";
+import Reels from "@/components/sections/Reels";
 import Welcome from "@/components/sections/Welcome";
 import Treatments from "@/components/sections/Treatments";
 import Gallery from "@/components/sections/Gallery";
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Reels />
         <Welcome />
         <Treatments />
         <Gallery />
