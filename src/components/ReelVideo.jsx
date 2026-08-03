@@ -2,17 +2,23 @@ import { useRef, useEffect, useState } from "react";
 
 /**
  * Einzelne Video-Reel-Karte.
- * - Lazy-Loading: erstes Video sofort, Rest über IntersectionObserver mit rootMargin.
- * - Autoplay: jedes Video eigener IntersectionObserver (Desktop >=60% Play, <30% Pause;
- *   Mobile >=60% Play, <30% Pause — in einem Slider ist so praktisch nur die stärkste
- *   Karte aktiv).
- * - prefers-reduced-motion: kein Autoplay, Poster/Standbild bleibt stehen.
+ * - Lazy-Loading: erstes Video sofort, Rest über IntersectionObserver mit root=Slider-Track
+ *   und rootMargin (Karten rechts/links ausserhalb des sichtbaren Slider-Bereichs laden erst kurz vor dem Erreichen).
+ * - Autoplay: jedes Video eigener IntersectionObserver (>=60% sichtbar Play, <30% Pause).
+ * - prefers-reduced-motion: kein Autoplay, Standbild/Poster bleibt stehen.
  */
-export default function ReelVideo({ src, title, index, isMobile, poster }) {
+export default function ReelVideo({ src, title, index, isMobile, rootRef, poster }) {
   const videoRef = useRef(null);
   const [shouldLoad, setShouldLoad] = useState(index === 0);
 
-  // 1) Lazy-Load aller Videos ausser dem ersten
+  // Sobald ein Video geladen werden soll, Metadaten + erstes Frame laden
+  useEffect(() => {
+    if (!shouldLoad) return;
+    const video = videoRef.current;
+    if (video && index !== 0) video.load();
+  }, [shouldLoad, index]);
+
+  // 1) Lazy-Load aller Videos ausser dem ersten — Root ist der Slider-Track
   useEffect(() => {
     if (index === 0) {
       setShouldLoad(true);
@@ -29,13 +35,13 @@ export default function ReelVideo({ src, title, index, isMobile, poster }) {
           }
         });
       },
-      { rootMargin: "500px 0px" }
+      { root: rootRef?.current ?? null, rootMargin: "500px 0px" }
     );
     obs.observe(node);
     return () => obs.disconnect();
-  }, [index]);
+  }, [index, rootRef]);
 
-  // 2) Autoplay-Logik
+  // 2) Autoplay-Logik — Root ist der Slider-Track
   useEffect(() => {
     const video = videoRef.current;
     if (!video || !shouldLoad) return;
@@ -59,20 +65,18 @@ export default function ReelVideo({ src, title, index, isMobile, poster }) {
       (entries) => {
         entries.forEach((e) => {
           const ratio = e.intersectionRatio;
-          const playThreshold = isMobile ? 0.6 : 0.6;
-          const pauseThreshold = isMobile ? 0.3 : 0.3;
-          if (ratio >= playThreshold) {
+          if (ratio >= 0.6) {
             playSafe();
-          } else if (ratio < pauseThreshold) {
+          } else if (ratio < 0.3) {
             video.pause();
           }
         });
       },
-      { threshold: [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1] }
+      { root: rootRef?.current ?? null, threshold: [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1] }
     );
     obs.observe(video);
     return () => obs.disconnect();
-  }, [shouldLoad, isMobile]);
+  }, [shouldLoad, rootRef]);
 
   return (
     <article className="shrink-0 w-[230px] sm:w-[250px] md:w-[260px] snap-start">
@@ -84,7 +88,7 @@ export default function ReelVideo({ src, title, index, isMobile, poster }) {
           defaultMuted
           playsInline
           loop
-          preload={index === 0 ? "auto" : "none"}
+          preload={shouldLoad ? "auto" : "none"}
           src={shouldLoad ? src : undefined}
           data-src={src}
           poster={poster}

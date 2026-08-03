@@ -90,6 +90,7 @@ export default function Reels() {
                 title={r.title}
                 index={i}
                 isMobile={isMobile}
+                rootRef={trackRef}
               />
             ))}
           </div>
