@@ -102,3 +102,4 @@ jobs:
 
       - name: Finished
         run: echo "✅ Website deployed successfully."
+        #pulled and merged
