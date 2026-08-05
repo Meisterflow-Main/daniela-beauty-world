@@ -22,7 +22,7 @@ export default function AivieNewsletter() {
     <section id="warteliste" className="py-24 gradient-rose">
       <div className="max-w-3xl mx-auto px-5 md:px-8 text-center">
         <ScrollReveal>
-          <span className="text-white/80 text-sm font-heading font-medium tracking-[0.25em] uppercase mb-4 block">Exklusiver Vorabzugang</span>
+          <span className="text-white/80 text-sm font-heading font-medium tracking-[0.25em] uppercase mb-4 block">Seien Sie die Erste mit einer Weltneuheit</span>
           <h2 className="font-heading font-bold text-white text-4xl md:text-5xl mb-4">Sichere dir deinen Platz</h2>
           <p className="text-white/80 text-lg mb-10">Werde als Erste informiert, sobald AIVIE verfügbar ist – und sichere dir exklusiven Vorabzugang.</p>
           {!sent ? (
