@@ -10,7 +10,7 @@ const REELS = [
   },
   {
     src: "https://media.base44.com/videos/public/6a60cb30ba3b3938399f5ac5/1e8c470f1_WhatsAppVideo2026-08-05at111947.mp4",
-    title: "Schmerzfreie Haarentfernung mit Diodenlaser",
+    title: "Behandlung",
   },
   {
     src: "https://media.base44.com/videos/public/6a60cb30ba3b3938399f5ac5/7aae4007e_KosmetischesZahnbleachingohneWasserstoffperoxidschonendschmerzfreizustrahlendweissenZ.mp4",
