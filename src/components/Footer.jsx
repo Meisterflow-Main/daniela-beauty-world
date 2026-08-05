@@ -46,6 +46,7 @@ export default function Footer() {
                 <li key={d.slug}><Link to={`/behandlung/${d.slug}`} className="hover:text-rose-light transition-colors">{d.label}</Link></li>
               ))}
               <li><Link to="/dienstleistungen" className="text-rose-light hover:text-rose-gold transition-colors font-medium">Alle Dienstleistungen</Link></li>
+              <li><Link to="/aivie" className="text-rose-light hover:text-rose-gold transition-colors font-medium">AIVIE – Pre-Launch</Link></li>
             </ul>
           </div>
 
