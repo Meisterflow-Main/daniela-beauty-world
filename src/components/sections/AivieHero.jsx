@@ -35,14 +35,16 @@ export default function AivieHero() {
       <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-rose-nude/50 blur-3xl" />
       <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-8 w-full grid lg:grid-cols-2 gap-12 items-center">
         <div>
-         
-          <h1 className="font-heading font-bold text-rose-ink text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-4">
+         <span className="inline-flex items-center gap-2 text-rose-gold text-sm font-heading font-medium tracking-[0.2em] uppercase mb-6">
+           <Sparkles className="w-4 h-4" /> Seien Sie die Erste mit einer Weltneuheit
+         </span>
+         <h1 className="font-heading font-bold text-rose-ink text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-4">
             {aivieBrand.name}
           </h1>
           <p className="text-rose-deep text-sm font-heading tracking-[0.3em] uppercase mb-3">{aivieBrand.sub}</p>
           <p className="text-rose-gold text-lg font-heading italic mb-8">{aivieBrand.tagline}</p>
           <p className="text-rose-ink/70 text-base md:text-lg leading-relaxed max-w-xl mb-10">
-            Die nächste Generation der Hautpflege – intelligente Wirkstoffe, luxuriöse Texturen und sichtbare Ergebnisse. Erlebe die Zukunft der Schönheit.
+            Werde als Erste informiert, sobald AIVIE verfügbar ist – und sichere dir exklusiven Vorabzugang.
           </p>
           <div className="grid grid-cols-4 gap-3 max-w-md mb-10">
             {units.map((u) => (
