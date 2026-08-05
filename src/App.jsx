@@ -17,6 +17,8 @@ import Regionen from '@/pages/Regionen';
 import UeberUns from '@/pages/UeberUns';
 import Kontakt from '@/pages/Kontakt';
 import Faq from '@/pages/Faq';
+import Blog from '@/pages/Blog';
+import BlogPost from '@/pages/BlogPost';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -57,6 +59,8 @@ const AuthenticatedApp = () => {
       <Route path="/ueber-uns" element={<UeberUns />} />
       <Route path="/kontakt" element={<Kontakt />} />
       <Route path="/faq" element={<Faq />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

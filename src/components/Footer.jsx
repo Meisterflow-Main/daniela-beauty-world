@@ -67,6 +67,7 @@ export default function Footer() {
               <li><Link to="/impressum" className="hover:text-rose-light transition-colors">Impressum</Link></li>
               <li><Link to="/datenschutz" className="hover:text-rose-light transition-colors">Datenschutz</Link></li>
               <li><Link to="/faq" className="hover:text-rose-light transition-colors">FAQ</Link></li>
+              <li><Link to="/blog" className="hover:text-rose-light transition-colors">Blog</Link></li>
               <li><Link to="/auftrag-bewerten" className="hover:text-rose-light transition-colors">Bewertung abgeben</Link></li>
             </ul>
           </div>
