@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation, useNavigationType } from "react-router-dom";
+import { setCanonical } from "@/lib/seo";
 
 const getHashId = (hash) => {
   const rawId = hash.slice(1);
@@ -16,6 +17,7 @@ export default function ScrollToTop() {
   const navigationType = useNavigationType();
 
   useEffect(() => {
+    setCanonical(pathname);
     if (navigationType === "POP") return;
 
     if (hash) {
