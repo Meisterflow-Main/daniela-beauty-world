@@ -12,10 +12,10 @@ export default function AivieIntro() {
         <ScrollReveal delay={150}>
           <div className="space-y-6 text-rose-ink/75 text-base md:text-lg leading-relaxed">
             <p>
-              Welcome to the world of <strong className="font-semibold text-rose-ink">AIVIE</strong>
+              Willkommen in der Welt von <strong className="font-semibold text-rose-ink">AIVIE</strong>
             </p>
             <p>
-              <strong className="font-semibold text-rose-ink">AIVIE</strong> is more than a cream. It's a new understanding of premium skincare. Intelligent. Sensual. Created for skin that deserves the highest standards. Luxury care with intelligent active ingredient power:
+              <strong className="font-semibold text-rose-ink">AIVIE</strong> ist mehr als eine Creme. Es ist ein neues Verständnis von Premium-Hautpflege. Intelligent. Sinnlich. Geschaffen für Haut, die höchste Ansprüche verdient. Luxuspflege mit intelligenter Wirkstoffpower:
             </p>
           </div>
         </ScrollReveal>
