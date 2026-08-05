@@ -22,8 +22,8 @@ export default function AivieNewsletter() {
     <section id="warteliste" className="py-24 gradient-rose">
       <div className="max-w-3xl mx-auto px-5 md:px-8 text-center">
         <ScrollReveal>
-          <span className="text-white/80 text-sm font-heading font-medium tracking-[0.25em] uppercase mb-4 block">Seien Sie die Erste mit einer Weltneuheit</span>
           <h2 className="font-heading font-bold text-white text-4xl md:text-5xl mb-4">Sichere dir deinen Platz</h2>
+          <span className="text-white/80 text-sm font-heading font-medium tracking-[0.25em] uppercase block mt-4">Seien Sie die Erste mit einer Weltneuheit</span>
           {!sent ? (
             <form onSubmit={submit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
               <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Dein Name" className="flex-1 px-5 py-3.5 rounded-sm bg-white/90 text-rose-ink placeholder:text-rose-ink/40 focus:outline-none focus:ring-2 focus:ring-white" />
