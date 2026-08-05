@@ -6,11 +6,12 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollReveal from "@/components/ScrollReveal";
 import { getRegionBySlug, regionen } from "@/data/gesichtsbehandlungRegionen";
 import { Phone, Mail, MapPin, Clock, ArrowRight, Check, Star, ExternalLink } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const treatments = [
-  { title: "PRX-Therapie", desc: "Nadelfreies Anti-Aging, das die Haut strafft und revitalisiert." },
-  { title: "Microneedling", desc: "Regt die Kollagenbildung an für ein ebenmässigeres Hautbild." },
-  { title: "Collagenfadenlifting", desc: "Natürlicher Lifting-Effekt ohne operativen Eingriff." },
+  { title: "PRX-Therapie", slug: "prx-therapie", desc: "Nadelfreies Anti-Aging, das die Haut strafft und revitalisiert." },
+  { title: "Microneedling", slug: "microneedling", desc: "Regt die Kollagenbildung an für ein ebenmässigeres Hautbild." },
+  { title: "Collagenfadenlifting", slug: "collagenfadenlifting", desc: "Natürlicher Lifting-Effekt ohne operativen Eingriff." },
 ];
 
 const usps = [
@@ -37,7 +38,8 @@ export default function GesichtsbehandlungRegion() {
   return (
     <>
       <Navbar />
-      <main className="pt-24">
+      <Breadcrumbs items={[{ label: "Startseite", to: "/" }, { label: "Regionen", to: "/regionen" }, { label: data.name }]} />
+      <main>
         {/* Hero */}
         <section className="relative py-20 md:py-28 bg-gradient-to-b from-rose-ink to-rose-ink/90 overflow-hidden">
           <div className="absolute inset-0 opacity-10">
@@ -107,9 +109,9 @@ export default function GesichtsbehandlungRegion() {
                 <ScrollReveal key={t.title} delay={i * 150} className="bg-rose-cream rounded-lg p-7 hover:shadow-luxe transition-all duration-500">
                   <h3 className="font-heading font-semibold text-rose-ink text-xl mb-3">{t.title}</h3>
                   <p className="text-rose-ink/70 text-sm leading-[1.7] mb-4">{t.desc}</p>
-                  <a href="#contact" className="text-rose-gold text-sm font-heading font-medium hover:text-rose-deep transition-colors">
+                  <Link to={`/behandlung/${t.slug}`} className="text-rose-gold text-sm font-heading font-medium hover:text-rose-deep transition-colors">
                     Mehr erfahren →
-                  </a>
+                  </Link>
                 </ScrollReveal>
               ))}
             </div>
@@ -220,6 +222,7 @@ export default function GesichtsbehandlungRegion() {
           <div className="max-w-7xl mx-auto px-5 md:px-8 text-center">
             <ScrollReveal>
               <h2 className="font-heading font-semibold text-rose-ink text-xl mb-6">Auch in weiteren Regionen für dich da</h2>
+              <Link to="/regionen" className="inline-block text-rose-gold text-sm font-heading font-semibold hover:text-rose-deep transition-colors mb-4">Alle Regionen</Link>
               <div className="flex flex-wrap justify-center gap-2">
                 {regionen.filter((r) => r.slug !== data.slug).map((r) => (
                   <Link key={r.slug} to={`/gesichtsbehandlung/${r.slug}`}

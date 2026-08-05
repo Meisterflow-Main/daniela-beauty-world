@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Check, Sparkles, ArrowRight, ChevronRight } from "lucide-react";
+import { Check, Sparkles, ArrowRight } from "lucide-react";
 import {
   Accordion,
   AccordionItem,
@@ -20,6 +20,8 @@ import {
   categoryEyebrows,
   pricesAnchors,
 } from "@/data/behandlungenIndex";
+import { regionen } from "@/data/gesichtsbehandlungRegionen";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 function setMeta(name, content) {
   let el = document.querySelector(`meta[name="${name}"]`);
@@ -85,16 +87,7 @@ export default function BehandlungDetail() {
     <>
       <Navbar />
       <main>
-        {/* Breadcrumb */}
-        <div className="max-w-7xl mx-auto px-5 md:px-8 pt-28 md:pt-32">
-          <nav className="flex items-center gap-2 text-sm text-rose-ink/60">
-            <Link to="/" className="hover:text-rose-gold transition-colors">Startseite</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <a href={`/${anchor}`} className="hover:text-rose-gold transition-colors">{behandlung.category}</a>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-rose-ink/80">{behandlung.shortName}</span>
-          </nav>
-        </div>
+        <Breadcrumbs items={[{ label: "Startseite", to: "/" }, { label: "Dienstleistungen", to: "/dienstleistungen" }, { label: behandlung.shortName }]} />
 
         {/* Hero */}
         <section className="py-12 md:py-16">
@@ -256,6 +249,32 @@ export default function BehandlungDetail() {
                 </ScrollReveal>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Region */}
+        <section className="py-16 md:py-20 bg-rose-cream/50">
+          <div className="max-w-4xl mx-auto px-5 md:px-8 text-center">
+            <ScrollReveal>
+              <h2 className="font-heading font-bold text-rose-ink text-3xl md:text-4xl mb-4">
+                {behandlung.shortName} in deiner Region
+              </h2>
+              <p className="text-rose-ink/70 text-base leading-[1.7] mb-8 max-w-2xl mx-auto">
+                Alle Behandlungen finden im Studio in Boniswil statt. Kundinnen aus Aarau, Lenzburg, Baden und der ganzen Umgebung reisen dafür gerne an.
+              </p>
+              <Link to="/regionen" className="inline-flex items-center gap-2 bg-rose-gold text-white px-8 py-4 rounded-sm font-heading font-semibold hover:bg-rose-deep transition-all shadow-soft">
+                Alle Regionen <ArrowRight className="w-4 h-4" />
+              </Link>
+              {behandlung.category === "Gesicht" && (
+                <div className="flex flex-wrap justify-center gap-2 mt-6">
+                  {regionen.slice(0, 6).map((r) => (
+                    <Link key={r.slug} to={`/gesichtsbehandlung/${r.slug}`} className="px-4 py-2 rounded-full border border-rose-nude text-rose-ink/70 text-sm hover:border-rose-gold hover:text-rose-gold transition-colors">
+                      {r.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </ScrollReveal>
           </div>
         </section>
 

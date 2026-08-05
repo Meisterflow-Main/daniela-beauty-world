@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowUpRight } from "lucide-react";
 
@@ -34,9 +35,12 @@ export default function Treatments() {
             Das sind meine <span className="text-gradient-rose">Behandlungen</span>
           </h2>
           <p className="text-rose-ink/70 text-lg leading-[1.7]">
-          Entdecke Behandlungen, die deine natürliche Schönheit hervorheben und dein Wohlbefinden steigern. Mit moderner Technik und hochwertigen Produkten sorge ich für Anwendungen, die genau zu deiner Haut und deinen Wünschen passen.
+           Entdecke Behandlungen, die deine natürliche Schönheit hervorheben und dein Wohlbefinden steigern. Mit moderner Technik und hochwertigen Produkten sorge ich für Anwendungen, die genau zu deiner Haut und deinen Wünschen passen.
           </p>
-        </ScrollReveal>
+          <Link to="/dienstleistungen" className="inline-flex items-center gap-1 text-rose-gold text-sm font-heading font-semibold hover:text-rose-deep transition-colors mt-4">
+            Alle Behandlungen entdecken <ArrowUpRight className="w-3.5 h-3.5" />
+          </Link>
+          </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {treatments.map((t, i) => (

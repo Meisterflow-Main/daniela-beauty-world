@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Instagram, MessageCircle, Facebook, ChevronDown } from "lucide-react";
 import { regionen } from "@/data/gesichtsbehandlungRegionen";
 
 const navLinks = [
-  { label: "Startseite", href: "/#hero" },
-  { label: "Über mich", href: "/#about" },
-  { label: "Behandlungen", href: "/#treatments" },
-  { label: "Galerie", href: "/#gallery" },
-  { label: "Kontakt", href: "/#contact" },
+  { label: "Startseite", to: "/" },
+  { label: "Dienstleistungen", to: "/dienstleistungen" },
+  { label: "Über uns", to: "/ueber-uns" },
+  { label: "Kontakt", to: "/kontakt" },
 ];
 
 const socialLinks = [
@@ -22,12 +21,21 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [regionsOpen, setRegionsOpen] = useState(false);
   const [mobileRegionsOpen, setMobileRegionsOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
+    if (!isHome) { setScrolled(true); return; }
     const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [isHome]);
+
+  useEffect(() => {
+    setOpen(false);
+    setMobileRegionsOpen(false);
+  }, [location.pathname]);
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "glass shadow-soft py-3" : "bg-transparent py-5"}`}>
@@ -40,21 +48,24 @@ export default function Navbar() {
 
         <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className={`text-sm font-medium transition-colors hover:text-rose-gold ${scrolled ? "text-rose-ink" : "text-white/90"}`}>
+            <Link key={link.label} to={link.to} className={`text-sm font-medium transition-colors hover:text-rose-gold ${scrolled ? "text-rose-ink" : "text-white/90"}`}>
               {link.label}
-            </a>
+            </Link>
           ))}
           <div
             className="relative"
             onMouseEnter={() => setRegionsOpen(true)}
             onMouseLeave={() => setRegionsOpen(false)}
           >
-            <button className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-rose-gold ${scrolled ? "text-rose-ink" : "text-white/90"}`}>
+            <Link to="/regionen" className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-rose-gold ${scrolled ? "text-rose-ink" : "text-white/90"}`}>
               Regionen <ChevronDown className="w-3.5 h-3.5" />
-            </button>
+            </Link>
             {regionsOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
                 <div className="glass shadow-luxe rounded-lg p-3 grid grid-cols-2 gap-1 w-72 animate-fade-in">
+                  <Link to="/regionen" className="col-span-2 px-3 py-2 rounded-sm text-sm text-rose-gold font-heading font-semibold hover:bg-rose-gold hover:text-white transition-colors border-b border-rose-nude mb-1">
+                    Alle Regionen
+                  </Link>
                   {regionen.map((r) => (
                     <Link key={r.slug} to={`/gesichtsbehandlung/${r.slug}`} className="px-3 py-2 rounded-sm text-sm text-rose-ink hover:bg-rose-gold hover:text-white transition-colors">
                       {r.name}
@@ -79,9 +90,9 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-          <a href="/#contact" className="bg-rose-gold text-white px-5 py-2.5 rounded-sm text-sm font-heading font-semibold hover:bg-rose-deep transition-all shadow-soft hover:shadow-luxe hover:-translate-y-0.5">
+          <Link to="/kontakt" className="bg-rose-gold text-white px-5 py-2.5 rounded-sm text-sm font-heading font-semibold hover:bg-rose-deep transition-all shadow-soft hover:shadow-luxe hover:-translate-y-0.5">
             Termin buchen
-          </a>
+          </Link>
         </div>
 
         <button className="lg:hidden" onClick={() => setOpen(!open)} aria-label="Menü">
@@ -93,9 +104,9 @@ export default function Navbar() {
         <div className="lg:hidden glass mt-3 mx-4 rounded-lg shadow-luxe p-6 animate-fade-in">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
-              <a key={link.label} href={link.href} onClick={() => setOpen(false)} className="text-rose-ink font-medium hover:text-rose-gold transition-colors">
+              <Link key={link.label} to={link.to} onClick={() => setOpen(false)} className="text-rose-ink font-medium hover:text-rose-gold transition-colors">
                 {link.label}
-              </a>
+              </Link>
             ))}
             <div>
               <button onClick={() => setMobileRegionsOpen(!mobileRegionsOpen)} className="flex items-center justify-between w-full text-rose-ink font-medium hover:text-rose-gold transition-colors">
@@ -103,6 +114,9 @@ export default function Navbar() {
               </button>
               {mobileRegionsOpen && (
                 <div className="grid grid-cols-2 gap-2 mt-3 animate-fade-in">
+                  <Link to="/regionen" onClick={() => setOpen(false)} className="text-rose-gold text-sm font-heading font-semibold hover:text-rose-deep transition-colors col-span-2">
+                    Alle Regionen
+                  </Link>
                   {regionen.map((r) => (
                     <Link key={r.slug} to={`/gesichtsbehandlung/${r.slug}`} onClick={() => setOpen(false)} className="text-rose-ink/70 text-sm hover:text-rose-gold transition-colors">
                       {r.name}
@@ -122,9 +136,9 @@ export default function Navbar() {
             <a href="tel:+41797505152" className="flex items-center gap-2 text-rose-ink font-medium">
               <Phone className="w-4 h-4 text-rose-gold" /> +41 79 750 51 52
             </a>
-            <a href="/#contact" onClick={() => setOpen(false)} className="bg-rose-gold text-white px-5 py-3 rounded-sm text-center font-heading font-semibold hover:bg-rose-deep transition-all">
+            <Link to="/kontakt" onClick={() => setOpen(false)} className="bg-rose-gold text-white px-5 py-3 rounded-sm text-center font-heading font-semibold hover:bg-rose-deep transition-all">
               Termin buchen
-            </a>
+            </Link>
           </div>
         </div>
       )}

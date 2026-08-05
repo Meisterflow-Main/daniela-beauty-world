@@ -12,6 +12,11 @@ import Impressum from '@/pages/Impressum';
 import Datenschutz from '@/pages/Datenschutz';
 import GesichtsbehandlungRegion from '@/pages/GesichtsbehandlungRegion';
 import BehandlungDetail from '@/pages/BehandlungDetail';
+import Dienstleistungen from '@/pages/Dienstleistungen';
+import Regionen from '@/pages/Regionen';
+import UeberUns from '@/pages/UeberUns';
+import Kontakt from '@/pages/Kontakt';
+import Faq from '@/pages/Faq';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -47,6 +52,11 @@ const AuthenticatedApp = () => {
       <Route path="/datenschutz" element={<Datenschutz />} />
       <Route path="/gesichtsbehandlung/:region" element={<GesichtsbehandlungRegion />} />
       <Route path="/behandlung/:slug" element={<BehandlungDetail />} />
+      <Route path="/dienstleistungen" element={<Dienstleistungen />} />
+      <Route path="/regionen" element={<Regionen />} />
+      <Route path="/ueber-uns" element={<UeberUns />} />
+      <Route path="/kontakt" element={<Kontakt />} />
+      <Route path="/faq" element={<Faq />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

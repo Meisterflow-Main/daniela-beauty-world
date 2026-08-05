@@ -2,6 +2,15 @@ import { Link } from "react-router-dom";
 import { Instagram, Facebook, MessageCircle, Phone, MapPin, Mail } from "lucide-react";
 import { regionen } from "@/data/gesichtsbehandlungRegionen";
 
+const dienstleistungen = [
+  { label: "Mikrodermabrasion", slug: "mikrodermabrasion" },
+  { label: "Microneedling", slug: "microneedling" },
+  { label: "PRX-Therapie", slug: "prx-therapie" },
+  { label: "Bio Face Lifting", slug: "bio-face-lifting" },
+  { label: "EM SLIM", slug: "em-slim" },
+  { label: "VIP Zahnbleaching", slug: "vip-zahnbleaching" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-rose-ink text-white/80">
@@ -31,19 +40,19 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-heading font-semibold text-white mb-4 text-sm uppercase tracking-wider">Navigation</h4>
+            <h4 className="font-heading font-semibold text-white mb-4 text-sm uppercase tracking-wider">Dienstleistungen</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="/#hero" className="hover:text-rose-light transition-colors">Startseite</a></li>
-              <li><a href="/#about" className="hover:text-rose-light transition-colors">Über mich</a></li>
-              <li><a href="/#treatments" className="hover:text-rose-light transition-colors">Behandlungen</a></li>
-              <li><a href="/#gallery" className="hover:text-rose-light transition-colors">Galerie</a></li>
-              <li><a href="/#contact" className="hover:text-rose-light transition-colors">Kontakt</a></li>
+              {dienstleistungen.map((d) => (
+                <li key={d.slug}><Link to={`/behandlung/${d.slug}`} className="hover:text-rose-light transition-colors">{d.label}</Link></li>
+              ))}
+              <li><Link to="/dienstleistungen" className="text-rose-light hover:text-rose-gold transition-colors font-medium">Alle Dienstleistungen</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-heading font-semibold text-white mb-4 text-sm uppercase tracking-wider">Regionen</h4>
             <ul className="space-y-3 text-sm">
+              <li><Link to="/regionen" className="text-rose-light hover:text-rose-gold transition-colors font-medium">Alle Regionen</Link></li>
               {regionen.map((r) => (
                 <li key={r.slug}>
                   <Link to={`/gesichtsbehandlung/${r.slug}`} className="hover:text-rose-light transition-colors">{r.name}</Link>
@@ -57,6 +66,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li><Link to="/impressum" className="hover:text-rose-light transition-colors">Impressum</Link></li>
               <li><Link to="/datenschutz" className="hover:text-rose-light transition-colors">Datenschutz</Link></li>
+              <li><Link to="/faq" className="hover:text-rose-light transition-colors">FAQ</Link></li>
               <li><Link to="/auftrag-bewerten" className="hover:text-rose-light transition-colors">Bewertung abgeben</Link></li>
             </ul>
           </div>
