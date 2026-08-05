@@ -11,6 +11,7 @@ import AuftragBewerten from '@/pages/AuftragBewerten';
 import Impressum from '@/pages/Impressum';
 import Datenschutz from '@/pages/Datenschutz';
 import GesichtsbehandlungRegion from '@/pages/GesichtsbehandlungRegion';
+import BehandlungDetail from '@/pages/BehandlungDetail';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -45,6 +46,7 @@ const AuthenticatedApp = () => {
       <Route path="/impressum" element={<Impressum />} />
       <Route path="/datenschutz" element={<Datenschutz />} />
       <Route path="/gesichtsbehandlung/:region" element={<GesichtsbehandlungRegion />} />
+      <Route path="/behandlung/:slug" element={<BehandlungDetail />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

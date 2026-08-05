@@ -6,6 +6,7 @@ import Hero from "@/components/sections/Hero";
 import Reels from "@/components/sections/Reels";
 import Welcome from "@/components/sections/Welcome";
 import Treatments from "@/components/sections/Treatments";
+import Prices from "@/components/sections/Prices";
 import Gallery from "@/components/sections/Gallery";
 import About from "@/components/sections/About";
 import Testimonials from "@/components/sections/Testimonials";
@@ -21,6 +22,7 @@ export default function Home() {
         <Reels />
         <Welcome />
         <Treatments />
+        <Prices />
         <Gallery />
         <About />
         <Testimonials />
