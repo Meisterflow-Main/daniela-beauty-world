@@ -10,7 +10,7 @@ const GOOGLE_REVIEW_LINK = "https://www.google.com/search?q=daniela+bauty+world&
 const questions = [
   { id: "quality", text: "Wie zufrieden waren Sie mit der Qualität Ihrer Behandlung?", options: ["Sehr zufrieden", "Zufrieden", "Eher unzufrieden", "Sehr unzufrieden"] },
   { id: "atmosphere", text: "Wie hat Ihnen die Atmosphäre im Studio gefallen?", options: ["Sehr angenehm", "Angenehm", "Weniger angenehm", "Unangenehm"] },
-  { id: "punctuality", text: "War die Terminvereinbarung und Pünktlichkeit zu Ihrer Zufriedenheit?", options: ["Absolut pünktlich", "Größtenteils pünktlich", "Leichte Verzögerung", "Unpünktlich"] },
+  { id: "punctuality", text: "War die Terminvereinbarung und Pünktlichkeit zu Ihrer Zufriedenheit?", options: ["Absolut pünktlich", "Grösstenteils pünktlich", "Leichte Verzögerung", "Unpünktlich"] },
 ];
 
 export default function AuftragBewerten() {

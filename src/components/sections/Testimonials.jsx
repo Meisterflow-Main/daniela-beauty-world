@@ -25,12 +25,12 @@ const testimonials = [
   {
     name: "Tanja",
     treatment: "Microneedling",
-    text: "Ich habe bei Daniela das Microneedling gemacht und bin begeistert! Meine Haut wirkt deutlich straffer, kleine Fältchen sind gemildert und mein Teint ist viel ebenmäßiger. Schon nach der ersten Behandlung habe ich einen Unterschied gesehen. Daniela arbeitet extrem professionell und erklärt alles sehr verständlich. Absolute Empfehlung für alle, die ihre Haut sichtbar verjüngen möchten!",
+    text: "Ich habe bei Daniela das Microneedling gemacht und bin begeistert! Meine Haut wirkt deutlich straffer, kleine Fältchen sind gemildert und mein Teint ist viel ebenmässiger. Schon nach der ersten Behandlung habe ich einen Unterschied gesehen. Daniela arbeitet extrem professionell und erklärt alles sehr verständlich. Absolute Empfehlung für alle, die ihre Haut sichtbar verjüngen möchten!",
   },
   {
     name: "Roxana",
     treatment: "Stammkundin",
-    text: "Gehe seit einigen Monaten regelmäßig zu Daniela und jedes Mal fühle ich mich wie neu geboren. Man merkt, dass sie ihre Kundinnen wirklich ernst nimmt. Ich kann sie von Herzen empfehlen! 💖",
+    text: "Gehe seit einigen Monaten regelmässig zu Daniela und jedes Mal fühle ich mich wie neu geboren. Man merkt, dass sie ihre Kundinnen wirklich ernst nimmt. Ich kann sie von Herzen empfehlen! 💖",
   },
 ];
 

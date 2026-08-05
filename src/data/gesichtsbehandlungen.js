@@ -15,7 +15,7 @@ export const gesichtsbehandlungen = [
     options: [],
     image: "https://onecdn.io/media/47372495-8300-4851-adac-7f9af58e5c2e/xlg2x",
     intro:
-      "Die tiefenreinigende Gesichtsbehandlung mit Mikrodermabrasion ist die ideale Wahl, wenn du eine gründliche, porentiefe Reinigung mit spürbarem Sofort-Effekt wünschst. Sanft werden abgestorbene Hautschüppchen entfernt und das Hautbild sichtbar verfeinert – für einen frischen, strahlenden Teint.",
+      "Die tiefenreinigende Gesichtsbehandlung mit Mikrodermabrasion ist die ideale Wahl, wenn du eine gründliche, porentiefe Reinigung mit spürbarem Sofort-Effekt wünschst. Sanft werden abgestorbene Hautschüppchen entfernt und das Hautbild sichtbar verfeinert: für einen frischen, strahlenden Teint.",
     about:
       "Mit moderner Mikrodermabrasions-Technologie wird die oberste Hautschicht schonend abgetragen. Das regt die Zellerneuerung an, verfeinert Poren und lässt die Haut frischer und ebenmässiger wirken. Eine anschliessende Pflegemassage und eine auf deinen Hauttyp abgestimmte Abschlusspflege runden die Behandlung ab. Inklusive kostenlose Hautanalyse.",
     benefits: [
@@ -33,7 +33,7 @@ export const gesichtsbehandlungen = [
     faq: [
       { q: "Ist die Behandlung schmerzhaft?", a: "Nein. Die Mikrodermabrasion ist sanft und wird als leichtes Vakuum-Gefühl wahrgenommen." },
       { q: "Wie oft sollte ich die Behandlung wiederholen?", a: "Für optimale Ergebnisse empfehle ich einen Abstand von etwa 3–4 Wochen." },
-      { q: "Für welche Hauttypen ist sie geeignet?", a: "Für fast alle Hauttypen – besonders bei matter, unebener oder zu Unreinheiten neigender Haut." },
+      { q: "Für welche Hauttypen ist sie geeignet?", a: "Für fast alle Hauttypen: besonders bei matter, unebener oder zu Unreinheiten neigender Haut." },
     ],
     seo: {
       title: "Mikrodermabrasion in Boniswil | Daniela Beauty World",
@@ -56,7 +56,7 @@ export const gesichtsbehandlungen = [
     intro:
       "Das Bio Peelx Bio Microneedling mit Premium Bio-Algen ist eine rein natürliche Behandlungsmethode für intensive Hauterneuerung. Feinste Mikronadeln öffnen die Hautbarriere minimal, sodass die wertvollen Bio-Algen tief in die Haut gelangen und Regeneration sowie Verfeinerung des Hautbildes fördern.",
     about:
-      "Diese schonende, komplett natürliche Methode kombiniert mechanische Impulse mit der Kraft Bio-zertifizierter Algen. Sie regt die Zellerneuerung an, glättet das Hautbild und unterstützt die Haut bei der Regeneration – ganz ohne chemische Zusätze. Ideal für alle, die eine nachhaltige, naturbelassene Hautpflege schätzen.",
+      "Diese schonende, komplett natürliche Methode kombiniert mechanische Impulse mit der Kraft Bio-zertifizierter Algen. Sie regt die Zellerneuerung an, glättet das Hautbild und unterstützt die Haut bei der Regeneration: ganz ohne chemische Zusätze. Ideal für alle, die eine nachhaltige, naturbelassene Hautpflege schätzen.",
     benefits: [
       { title: "100 % Bio-Algen", text: "Rein natürliche Wirkstoffe, tief in die Haut eingebracht." },
       { title: "Intensive Erneuerung", text: "Förderung der Regeneration und eines feineren Hautbildes." },
@@ -93,7 +93,7 @@ export const gesichtsbehandlungen = [
     options: [],
     image: "https://onecdn.io/media/408b96a1-6121-4b4a-b44e-74cff6c25aa6/xlg2x",
     intro:
-      "Das Microneedling ist eine bewährte Methode zur Hauterneuerung. Feinste Nadeln setzen gezielte Impulse, die die Kollagenproduktion anregen und die Hautstruktur sichtbar verbessern – für ein glatteres, ebenmässigeres Hautbild.",
+      "Das Microneedling ist eine bewährte Methode zur Hauterneuerung. Feinste Nadeln setzen gezielte Impulse, die die Kollagenproduktion anregen und die Hautstruktur sichtbar verbessern: für ein glatteres, ebenmässigeres Hautbild.",
     about:
       "Durch kontrollierte Mikroverletzungen wird der natürliche Reparaturmechanismus der Haut aktiviert. Die Kollagen- und Elastinproduktion wird angeregt, feine Linien, Narben und Unebenheiten erscheinen gemildert. Das Ergebnis: eine glattere, frischere und jugendlicher wirkende Haut. Optional erweiterbar auf Hals und Dekolleté.",
     benefits: [
@@ -160,10 +160,10 @@ export const gesichtsbehandlungen = [
   },
   {
     slug: "prx-therapie",
-    name: "PRX-Therapie – Biorevitalisierende Behandlung",
+    name: "PRX-Therapie: Biorevitalisierende Behandlung",
     shortName: "PRX-Therapie",
     category: "Gesicht",
-    tagline: "Regeneriert die Haut intensiv, verbessert Festigkeit und Ausstrahlung - ganz ohne Nadeln.",
+    tagline: "Regeneriert die Haut intensiv, verbessert Festigkeit und Ausstrahlung, ganz ohne Nadeln.",
     price: "225 CHF",
     duration: "75 Minuten",
     kuren: ["Ab 5 Kuren: 179 CHF", "Ab 4 Kuren: 169 CHF"],
@@ -171,7 +171,7 @@ export const gesichtsbehandlungen = [
     options: [],
     image: "https://onecdn.io/media/09660d5d-7af3-4d39-95f1-3fbd4af71c9/xlg2x",
     intro:
-      "Die PRX-Therapie ist eine biorevitalisierende Tiefenbehandlung, die die Haut intensiv regeneriert und Festigkeit sowie Ausstrahlung verbessert – ganz ohne Nadeln und ohne Ausfallzeiten.",
+      "Die PRX-Therapie ist eine biorevitalisierende Tiefenbehandlung, die die Haut intensiv regeneriert und Festigkeit sowie Ausstrahlung verbessert: ganz ohne Nadeln und ohne Ausfallzeiten.",
     about:
       "Mit einem speziellen Wirkstoffkomplex wird die Haut tiefenhaft revitalisiert. Die Kombination aus TCA und Wasserstoffperoxid fördert die Regeneration, strafft das Gewebe und verbessert das Hautbild merklich. Die Behandlung ist schmerzarm und erfordert keine Erholungszeit. Vorteilhafte Kurpreise ab 4 bzw. 5 Behandlungen.",
     benefits: [
@@ -187,7 +187,7 @@ export const gesichtsbehandlungen = [
       { title: "Pflege & Abschluss", text: "Abschliessende Pflege für ein frisches Ergebnis." },
     ],
     faq: [
-      { q: "Brauche ich eine Kur?", a: "Mehrere Behandlungen im Abstand von 1–2 Wochen verstärken den Effekt – zu attraktiven Kurpreisen." },
+      { q: "Brauche ich eine Kur?", a: "Mehrere Behandlungen im Abstand von 1–2 Wochen verstärken den Effekt: zu attraktiven Kurpreisen." },
       { q: "Ist die Behandlung schmerzhaft?", a: "Sie ist angenehm und erfordert keine Nadeln oder Betäubung." },
       { q: "Für wen geeignet?", a: "Für alle, die eine Tiefenregeneration ohne Ausfallzeiten suchen." },
     ],
@@ -200,7 +200,7 @@ export const gesichtsbehandlungen = [
   {
     slug: "aqua-star-hydrofacial",
     name: "Aqua Star (Hydrofacial)",
-    shortName: "Aqua Star – Hydrofacial",
+    shortName: "Aqua Star: Hydrofacial",
     category: "Gesicht",
     tagline: "Intensive Tiefenreinigung und Hydration für ein sofort frisches, klares und strahlendes Hautbild.",
     price: null,
@@ -208,12 +208,12 @@ export const gesichtsbehandlungen = [
     kuren: [],
     addons: [],
     options: [
-      "Basic + Lichttherapie – 190 CHF / 60 Minuten",
-      "Deluxe + Lichttherapie & Maske – 220 CHF / 90 Minuten",
+      "Basic + Lichttherapie: 190 CHF / 60 Minuten",
+      "Deluxe + Lichttherapie & Maske: 220 CHF / 90 Minuten",
     ],
     image: "https://onecdn.io/media/4eac3125-fc90-4bd3-9dd8-3b3548ebb99a/xlg2x",
     intro:
-      "Das Aqua Star Hydrofacial vereint intensive Tiefenreinigung mit tiefengreifender Hydration. Schmutz und abgestorbene Zellen werden sanft entfernt, während die Haut gleichzeitig mit Feuchtigkeit versorgt wird – für ein sofort frisches, klares und strahlendes Hautbild.",
+      "Das Aqua Star Hydrofacial vereint intensive Tiefenreinigung mit tiefengreifender Hydration. Schmutz und abgestorbene Zellen werden sanft entfernt, während die Haut gleichzeitig mit Feuchtigkeit versorgt wird: für ein sofort frisches, klares und strahlendes Hautbild.",
     about:
       "Wasserpeeling-Technologie reinigt die Poren schonend und tiefenwirksam, Seren versorgen die Haut mit Feuchtigkeit. Eine abschliessende Lichttherapie beruhigt und unterstützt das Hautbild. Wähle zwischen der Basic-Variante mit Lichttherapie (60 Minuten) und der luxuriösen Deluxe-Variante mit Lichttherapie und Maske (90 Minuten).",
     benefits: [
@@ -252,9 +252,9 @@ export const gesichtsbehandlungen = [
     options: [],
     image: "https://onecdn.io/media/55182516-4551-4768-8bf3-d99be5a4a38c/xlg2x",
     intro:
-      "Das Bio Face Lifting ist eine natürliche Gesichtsstraffung für verbesserte Spannkraft, klare Konturen und mehr Ausstrahlung. Die Haut wirkt sichtbar gefestigt, geglättet und revitalisiert – ganz ohne operative Eingriffe.",
+      "Das Bio Face Lifting ist eine natürliche Gesichtsstraffung für verbesserte Spannkraft, klare Konturen und mehr Ausstrahlung. Die Haut wirkt sichtbar gefestigt, geglättet und revitalisiert: ganz ohne operative Eingriffe.",
     about:
-      "Mit biologisch wirkenden Methoden wird die Haut angeregt, sich von innen zu straffen. Spannkraft und Konturen verbessern sich sichtbar, das Gesicht wirkt frischer und definierter. Eine Kur von mehreren Behandlungen verstärkt den Effekt – schon ab 4 Kuren profitierst du von einem attraktiven Vorzugspreis.",
+      "Mit biologisch wirkenden Methoden wird die Haut angeregt, sich von innen zu straffen. Spannkraft und Konturen verbessern sich sichtbar, das Gesicht wirkt frischer und definierter. Eine Kur von mehreren Behandlungen verstärkt den Effekt: schon ab 4 Kuren profitierst du von einem attraktiven Vorzugspreis.",
     benefits: [
       { title: "Natürliche Straffung", text: "Sichtbar gefestigte, geglättete Haut." },
       { title: "Bessere Konturen", text: "Förderung definierter Gesichtskonturen." },
@@ -330,9 +330,9 @@ export const gesichtsbehandlungen = [
     options: [],
     image: "https://onecdn.io/media/787252b5-07de-45b3-a79f-fb29dcbb60e4/xlg2x",
     intro:
-      "Das Collagenfadenlifting ist eine straffende Behandlung für verbesserte Hautfestigkeit, klare Konturen und mehr Elastizität. Es aktiviert die natürliche Kollagenbildung – für ein sichtbar geglättetes und gefestigtes Hautbild.",
+      "Das Collagenfadenlifting ist eine straffende Behandlung für verbesserte Hautfestigkeit, klare Konturen und mehr Elastizität. Es aktiviert die natürliche Kollagenbildung: für ein sichtbar geglättetes und gefestigtes Hautbild.",
     about:
-      "Fibrin-Threads regen die körpereigene Kollagenproduktion an und stützen die Gesichtskonturen von innen. Die Haut wirkt gefestigt, geglättet und jugendlicher. Eine Kur ab 4 Behandlungen erhöht die Wirkung – zum attraktiven Vorzugspreis von 185 CHF pro Behandlung.",
+      "Fibrin-Threads regen die körpereigene Kollagenproduktion an und stützen die Gesichtskonturen von innen. Die Haut wirkt gefestigt, geglättet und jugendlicher. Eine Kur ab 4 Behandlungen erhöht die Wirkung: zum attraktiven Vorzugspreis von 185 CHF pro Behandlung.",
     benefits: [
       { title: "Aktiviert Kollagen", text: "Stimuliert die natürliche Kollagenbildung." },
       { title: "Gefestigte Haut", text: "Sichtbar gestraffte, geglättete Hautoberfläche." },

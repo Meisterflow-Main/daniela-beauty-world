@@ -11,11 +11,11 @@ export default function Contact() {
 
   const validate = () => {
     const e = {};
-    if (!form.name.trim()) e.name = "Bitte geben Sie Ihren Namen ein.";
-    if (!form.email.trim()) e.email = "Bitte geben Sie Ihre E-Mail ein.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Bitte geben Sie eine gültige E-Mail ein.";
-    if (!form.phone.trim()) e.phone = "Bitte geben Sie Ihre Telefonnummer ein.";
-    if (!form.description.trim()) e.description = "Bitte beschreiben Sie Ihr Anliegen.";
+    if (!form.name.trim()) e.name = "Bitte gib deinen Namen ein.";
+    if (!form.email.trim()) e.email = "Bitte gib deine E-Mail ein.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Bitte gib eine gültige E-Mail ein.";
+    if (!form.phone.trim()) e.phone = "Bitte gib deine Telefonnummer ein.";
+    if (!form.description.trim()) e.description = "Bitte beschreibe dein Anliegen.";
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -58,10 +58,10 @@ export default function Contact() {
               Kontakt
             </span>
             <h2 className="font-heading font-bold text-rose-ink text-4xl md:text-5xl leading-tight mb-6">
-              Vereinbaren Sie jetzt<br />einen <span className="text-gradient-rose">Termin</span>
+              Vereinbare jetzt deinen<br /><span className="text-gradient-rose">Termin</span>
             </h2>
             <p className="text-rose-ink/70 text-base leading-[1.7] mb-8">
-              Haben Sie Fragen oder wünschen Sie einen Termin? Kontaktieren Sie mich jetzt telefonisch, per E-Mail oder über das Kontaktformular – ich freue mich darauf, Ihre natürliche Schönheit professionell zu unterstreichen.
+              Hast du Fragen oder wünschst du dir einen Termin? Kontaktiere mich telefonisch, per E-Mail oder über das Kontaktformular. Ich freue mich darauf, deine natürliche Schönheit professionell zu unterstreichen.
             </p>
             <div className="bg-white rounded-lg shadow-soft p-6 mb-6">
               <div className="flex items-center gap-4 mb-4">
@@ -96,7 +96,7 @@ export default function Contact() {
                 <CheckCircle className="w-16 h-16 text-rose-gold mx-auto mb-4" />
                 <h3 className="font-heading font-bold text-rose-ink text-2xl mb-3">Nachricht gesendet!</h3>
                 <p className="text-rose-ink/70 text-sm leading-relaxed mb-6">
-                  Vielen Dank für Ihre Nachricht. Ich melde mich so schnell wie möglich bei Ihnen.
+                  Vielen Dank für deine Nachricht. Ich melde mich so schnell wie möglich bei dir.
                 </p>
                 <button onClick={() => setStatus("idle")} className="text-rose-gold font-heading font-medium text-sm hover:text-rose-deep transition-colors">
                   Weitere Nachricht senden
@@ -108,7 +108,7 @@ export default function Contact() {
                   <label className="block text-rose-ink text-sm font-heading font-medium mb-2">Name *</label>
                   <input type="text" value={form.name} onChange={update("name")} disabled={status === "loading"}
                     className={`w-full px-4 py-3 rounded-sm border ${errors.name ? "border-red-400" : "border-rose-nude"} focus:border-rose-gold focus:outline-none transition-colors text-sm`}
-                    placeholder="Ihr vollständiger Name" />
+                    placeholder="Dein vollständiger Name" />
                   {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -116,7 +116,7 @@ export default function Contact() {
                     <label className="block text-rose-ink text-sm font-heading font-medium mb-2">E-Mail *</label>
                     <input type="email" value={form.email} onChange={update("email")} disabled={status === "loading"}
                       className={`w-full px-4 py-3 rounded-sm border ${errors.email ? "border-red-400" : "border-rose-nude"} focus:border-rose-gold focus:outline-none transition-colors text-sm`}
-                      placeholder="ihre@email.ch" />
+                      placeholder="deine@email.ch" />
                     {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
                   </div>
                   <div>

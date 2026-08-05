@@ -3,11 +3,11 @@ import { Award, Heart, Sparkles, Clock, Leaf, Wind } from "lucide-react";
 
 const values = [
   { icon: Award, title: "Erfahrene Expertin", desc: "Profitier von meiner langjährigen Erfahrung und Expertise in der Ästhetik." },
-  { icon: Heart, title: "Individuelle Beratung", desc: "Maßgeschneiderte Behandlungen, die genau auf Deine Bedürfnisse abgestimmt sind." },
+  { icon: Heart, title: "Individuelle Beratung", desc: "Massgeschneiderte Behandlungen, die genau auf Deine Bedürfnisse abgestimmt sind." },
   { icon: Sparkles, title: "Moderne Technologien", desc: "Nur fortschrittliche Geräte und hochwertige Produkte für bestmögliche Ergebnisse." },
-  { icon: Clock, title: "Langfristige Ergebnisse", desc: "Regelmäßige Pflege für nachhaltige Schönheit." },
+  { icon: Clock, title: "Langfristige Ergebnisse", desc: "Regelmässige Pflege für nachhaltige Schönheit." },
   { icon: Leaf, title: "Ganzheitlicher Ansatz", desc: "Schönheit und Wohlbefinden gehen bei uns Hand in Hand." },
-  { icon: Wind, title: "Entspannte Atmosphäre", desc: "Genieße eine ruhige und angenehme Umgebung für pure Erholung." },
+  { icon: Wind, title: "Entspannte Atmosphäre", desc: "Geniesse eine ruhige und angenehme Umgebung für pure Erholung." },
 ];
 
 export default function Values() {
@@ -26,7 +26,7 @@ export default function Values() {
             Das zeichnet mich aus
           </h2>
           <p className="text-white/60 text-lg leading-[1.7]">
-            Bei mir dürfen Sie sich auf klare Werte und eine Arbeitsweise freuen, die Ihren Besuch besonders angenehm und wirkungsvoll macht.
+            Bei mir kannst du dich auf klare Werte und eine Arbeitsweise verlassen, die deinen Besuch angenehm und wirkungsvoll machen.
           </p>
         </ScrollReveal>
 

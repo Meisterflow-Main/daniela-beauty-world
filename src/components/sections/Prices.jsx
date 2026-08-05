@@ -15,7 +15,7 @@ export default function Prices() {
             <span className="text-gradient-rose">Gesicht</span>
           </h2>
           <p className="text-rose-ink/70 text-base md:text-lg leading-[1.7]">
-            Hochwertige Gesichtsbehandlungen vereinen moderne Methoden, entspannende Wellnessmomente und eine kostenlose Hautanalyse bei jeder Behandlung – für sichtbar frische, strahlende und gepflegte Haut.
+            Hochwertige Gesichtsbehandlungen vereinen moderne Methoden, entspannende Wellnessmomente und eine kostenlose Hautanalyse bei jeder Behandlung, für sichtbar frische, strahlende und gepflegte Haut.
           </p>
         </ScrollReveal>
 

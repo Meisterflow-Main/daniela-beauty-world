@@ -19,7 +19,7 @@ export default function Welcome() {
               Deinem Kosmetikstudio für individuelle Schönheit und Wohlbefinden!
             </p>
             <p className="text-rose-ink/70 text-base leading-[1.7] mb-6">
-              Mit maßgeschneiderten Behandlungen, modernen Techniken und hochwertigen Produkten biete ich Dir alles, was Deine Haut und Dein Körper verdienen.
+              Mit massgeschneiderten Behandlungen, modernen Techniken und hochwertigen Produkten biete ich Dir alles, was Deine Haut und Dein Körper verdienen.
             </p>
             <p className="text-rose-ink/70 text-base leading-[1.7] mb-6">
               Ob Gesichtsbehandlungen, Körperformung oder Augenbrauen‒ und Wimpernpflege – bei mir bist Du in besten Händen.

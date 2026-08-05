@@ -157,7 +157,7 @@ export default function GesichtsbehandlungRegion() {
                 </div>
                 <div className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-rose-gold shrink-0 mt-0.5" />
-                  <span className="text-rose-ink/80 text-sm">Mo–Sa: 09:00–19:00 Uhr</span>
+                  <span className="text-rose-ink/80 text-sm">Mo bis Sa, 09:00 bis 19:00 Uhr</span>
                 </div>
                 <a href="tel:+41797505152" className="flex items-center gap-3 text-rose-ink/80 hover:text-rose-gold transition-colors text-sm">
                   <Phone className="w-5 h-5 text-rose-gold shrink-0" /> +41 79 750 51 52

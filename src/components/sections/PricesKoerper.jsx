@@ -14,7 +14,7 @@ export default function PricesKoerper() {
             <span className="text-gradient-rose">Körper</span>
           </h2>
           <p className="text-rose-ink/70 text-base md:text-lg leading-[1.7]">
-            Gezielte Körperbehandlungen verbinden moderne Technologien mit ästhetischem Anspruch und einer kostenlosen Heimpflegeberatung bei jeder Behandlung – für sichtbare Ergebnisse und ein neues Körpergefühl.
+            Gezielte Körperbehandlungen verbinden moderne Technologien mit ästhetischem Anspruch und einer kostenlosen Heimpflegeberatung bei jeder Behandlung, für sichtbare Ergebnisse und ein neues Körpergefühl.
           </p>
         </ScrollReveal>
 

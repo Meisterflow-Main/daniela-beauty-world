@@ -14,7 +14,7 @@ export default function PricesZaehne() {
             <span className="text-gradient-rose">Zähne</span>
           </h2>
           <p className="text-rose-ink/70 text-base md:text-lg leading-[1.7]">
-            Strahlend schöne Zähne unterstreichen Ausstrahlung, Eleganz und Selbstbewusstsein – für ein Lächeln, das in Erinnerung bleibt.
+            Strahlend schöne Zähne unterstreichen Ausstrahlung, Eleganz und Selbstbewusstsein, für ein Lächeln, das in Erinnerung bleibt.
           </p>
         </ScrollReveal>
 

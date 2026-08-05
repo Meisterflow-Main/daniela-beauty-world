@@ -12,7 +12,7 @@ export default function Impressum() {
             <h1 className="font-heading font-bold text-rose-ink text-4xl md:text-5xl mb-8">Impressum</h1>
             <div className="bg-white rounded-lg shadow-soft p-8 md:p-10 space-y-6 text-rose-ink/80 text-sm leading-[1.8]">
               <div>
-                <h2 className="font-heading font-semibold text-rose-ink text-lg mb-2">Angaben gemäß Art. 17 DSGVO / revDSG</h2>
+                <h2 className="font-heading font-semibold text-rose-ink text-lg mb-2">Angaben gemäss Art. 17 DSGVO / revDSG</h2>
               </div>
               <div>
                 <h3 className="font-heading font-semibold text-rose-ink mb-1">Unternehmen</h3>

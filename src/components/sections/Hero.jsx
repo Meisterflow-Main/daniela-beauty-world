@@ -24,7 +24,7 @@ export default function Hero() {
             <span className="text-gradient-rose">Beauty World</span>
           </h1>
           <p className="text-white/90 text-lg md:text-xl leading-relaxed max-w-xl mb-10 animate-fade-in opacity-0" style={{ animationDelay: "0.6s" }}>
-            Deine Schönheit in besten Händen – Für ein strahlendes Ich, das von innen und außen leuchtet.
+            Deine Schönheit in besten Händen – Für ein strahlendes Ich, das von innen und aussen leuchtet.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in opacity-0" style={{ animationDelay: "0.8s" }}>
             <a href="#contact" className="group inline-flex items-center justify-center gap-2 bg-rose-gold text-white px-8 py-4 rounded-sm font-heading font-semibold text-base hover:bg-rose-deep transition-all shadow-luxe hover:-translate-y-1">

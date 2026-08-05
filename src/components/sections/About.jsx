@@ -36,7 +36,7 @@ export default function About() {
               <span className="text-gradient-rose">Daniela Pacifico</span>
             </h2>
             <div className="space-y-4 text-rose-ink/70 text-base leading-[1.7] mb-8">
-              <p>Schönheit ist für mich mehr als ein äußerer Eindruck – sie steht für Selbstvertrauen, Wohlbefinden und Persönlichkeit.</p>
+              <p>Schönheit ist für mich mehr als ein äusserer Eindruck – sie steht für Selbstvertrauen, Wohlbefinden und Persönlichkeit.</p>
               <p>Ich bin Daniela Pacifico und habe Daniela_beauty_world mit viel Leidenschaft und Fachwissen als Ort geschaffen, an dem moderne, wirksame Behandlungen auf individuelle Beratung und hochwertige Pflege treffen.</p>
               <p>Durch kontinuierliche Weiterbildungen und Erfahrung ist es mein Ziel, natürliche Ergebnisse zu erzielen und dich entspannt, strahlend und selbstbewusst zu verabschieden.</p>
               <p className="font-heading font-semibold text-rose-gold text-lg">Wahre Schönheit ist zeitlos. Das Meisterwerk bist du. 💕</p>

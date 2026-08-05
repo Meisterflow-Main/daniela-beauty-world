@@ -5,19 +5,19 @@ const treatments = [
   {
     title: "Gesicht",
     image: "https://onecdn.io/media/47372495-8300-4851-adac-7f9af58e5c2e/xlg2x",
-    description: "Individuell abgestimmte Gesichtsbehandlungen für reine, strahlende und sichtbar verjüngte Haut – von tiefenwirksamer Reinigung bis zu modernem Anti-Aging mit Sofort-Effekt.",
+    description: "Individuell abgestimmte Gesichtsbehandlungen für reine, strahlende und sichtbar verjüngte Haut, von tiefenwirksamer Reinigung bis zu modernem Anti-Aging mit Sofort-Effekt.",
     tag: "Anti-Aging · Reinigung · Verjüngung",
   },
   {
     title: "Körper",
     image: "https://onecdn.io/media/49a6a982-cdba-4db5-8e60-cf311a9f7103/xlg2x",
-    description: "Genießen Sie exklusive Körperbehandlungen, die Körper und Geist in Einklang bringen. Hochwertige Methoden und persönliche Beratung stehen dabei im Mittelpunkt.",
+    description: "Geniesse exklusive Körperbehandlungen, die Körper und Geist in Einklang bringen. Hochwertige Methoden und persönliche Beratung stehen dabei im Mittelpunkt.",
     tag: "Formung · Entspannung · Pflege",
   },
   {
     title: "Zähne",
     image: "https://onecdn.io/media/94ce8c12-7972-48bb-91a5-bcbe10370ae9/xlg2x",
-    description: "Für ein sichtbar helleres, gepflegtes Lächeln bieten wir schonende Zahnbleaching‒Behandlungen und exklusive VIP‒Angebote mit Sofort‒Effekt.",
+    description: "Für ein sichtbar helleres, gepflegtes Lächeln biete ich schonende Zahnbleaching-Behandlungen und exklusive VIP-Angebote mit Sofort-Effekt.",
     tag: "Bleaching · VIP-Angebote · Lächeln",
   },
 ];
@@ -34,7 +34,7 @@ export default function Treatments() {
             Das sind meine <span className="text-gradient-rose">Behandlungen</span>
           </h2>
           <p className="text-rose-ink/70 text-lg leading-[1.7]">
-            Entdecke unsere individuellen Behandlungen, die Deine natürliche Schönheit hervorheben und Dein Wohlbefinden steigern. Mit modernen Techniken und hochwertigen Produkten bieten wir Dir maßgeschneiderte Lösungen für jedes Bedürfnis.
+          Entdecke Behandlungen, die deine natürliche Schönheit hervorheben und dein Wohlbefinden steigern. Mit moderner Technik und hochwertigen Produkten sorge ich für Anwendungen, die genau zu deiner Haut und deinen Wünschen passen.
           </p>
         </ScrollReveal>
 
