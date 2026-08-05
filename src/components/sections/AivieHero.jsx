@@ -43,9 +43,6 @@ export default function AivieHero() {
           </h1>
           <p className="text-rose-deep text-sm font-heading tracking-[0.3em] uppercase mb-3">{aivieBrand.sub}</p>
           <p className="text-rose-gold text-lg font-heading italic mb-8">{aivieBrand.tagline}</p>
-          <p className="text-rose-ink/70 text-base md:text-lg leading-relaxed max-w-xl mb-10">
-            Werde als Erste informiert, sobald AIVIE verfügbar ist – und sichere dir exklusiven Vorabzugang.
-          </p>
           <div className="grid grid-cols-4 gap-3 max-w-md mb-10">
             {units.map((u) => (
               <div key={u.label} className="glass rounded-sm p-3 text-center shadow-soft">
