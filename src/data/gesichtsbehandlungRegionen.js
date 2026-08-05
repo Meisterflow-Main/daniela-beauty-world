@@ -4,6 +4,8 @@
 export const regionen = [
   {
     slug: "aarau",
+    lokaleBesonderheiten: "Aarau als Kantonshauptstadt lockt mit der autofreien Altstadt, den Aare-Promenaden und dem Bahnhof SBB. Viele Kundinnen verbinden ihren Termin in Boniswil mit einem Bummel durch die Altstadtgassen oder einem Einkauf im Telli-Quartier. Die kurze Anfahrt über die Hauptstrasse macht die Gesichtsbehandlung zu einem entspannten Ausflug aus dem Aarauer Alltag.",
+    typischeKunden: "Berufstätige aus der Aarauer Altstadt und dem Industriequartier Rombach, oft Pendlerinnen, die nach Feierabend noch Zeit für ihre Haut einplanen möchten.",
     name: "Aarau",
     fahrzeit: "ca. 20 Minuten",
     metaTitle: "Gesichtsbehandlung Aarau, Daniela Beauty World",
@@ -25,6 +27,8 @@ export const regionen = [
   },
   {
     slug: "lenzburg",
+    lokaleBesonderheiten: "Lenzburg thront mit seinem weithin sichtbaren Schloss über der Stadt; Habersack und die Hochwacht sind beliebte Wohnquartiere. Über die Hauptstrasse Richtung Seetal erreichst du Boniswil in wenigen Minuten, ideal für ein kurzes Pflegeritual zwischen Arbeit und Feierabend.",
+    typischeKunden: "Junge Familien aus den Lenzburger Neubauquartieren und Pendlerinnen, die über den Bahnhof Lenzburg Richtung Aarau oder Zürich unterwegs sind.",
     name: "Lenzburg",
     fahrzeit: "ca. 10 Minuten",
     metaTitle: "Gesichtsbehandlung Lenzburg, Daniela Beauty World",
@@ -46,6 +50,8 @@ export const regionen = [
   },
   {
     slug: "baden",
+    lokaleBesonderheiten: "Baden ist geprägt durch Thermalquellen, die Limmat und die belebte Badener Altstadt. Viele Kundinnen kombinieren ihren Termin in Boniswil mit einem Besuch in den Thermalbädern oder einem Spaziergang an der Limmatpromenade. Der Bahnhof Baden ist die zentrale Verkehrsdrehscheibe der Region.",
+    typischeKunden: "Wellness-affine Kundinnen aus dem Bäderquartier und der Altstadt, oft im Gesundheits- oder Verwaltungsbereich am Aargauer Kantonssitz tätig.",
     name: "Baden",
     fahrzeit: "ca. 30 Minuten",
     metaTitle: "Gesichtsbehandlung Baden, Daniela Beauty World Boniswil",
@@ -67,6 +73,8 @@ export const regionen = [
   },
   {
     slug: "wohlen",
+    lokaleBesonderheiten: "Wohlen im Freiamt ist bekannt für die Chrieschugel und sein beschauliches Kleinstadt-Flair. Das Suhren- und Bünztal prägen die Umgebung, und die ruhige Anfahrt über Seon macht Boniswil für Wohlerinnen zu einer naheliegenden Adresse für regelmässige Pflege.",
+    typischeKunden: "Bodenständige Kundinnen aus Wohlen und dem Freiamt, die persönliche Betreuung in familiärer Atmosphäre einer anonymen Kosmetikkette vorziehen.",
     name: "Wohlen",
     fahrzeit: "ca. 20 Minuten",
     metaTitle: "Gesichtsbehandlung Wohlen, Daniela Beauty World",
@@ -88,6 +96,8 @@ export const regionen = [
   },
   {
     slug: "zofingen",
+    lokaleBesonderheiten: "Zofingen besticht durch die historische Altstadt mit ihren Patrizierhäusern und das angrenzende Wiggertal. Der Bahnhof SBB ist die Haupteinspeisung, und viele Kundinnen reisen aus den Hügelgemeinden des Wiggertals nach Boniswil an.",
+    typischeKunden: "Qualitätsbewusste Kundinnen aus Zofingen und dem Wiggertal, die Wert auf Beständigkeit und ehrliche, ausführliche Beratung legen.",
     name: "Zofingen",
     fahrzeit: "ca. 25 Minuten",
     metaTitle: "Gesichtsbehandlung Zofingen, Daniela Beauty World",
@@ -109,6 +119,8 @@ export const regionen = [
   },
   {
     slug: "brugg",
+    lokaleBesonderheiten: "Brugg liegt als Wasserschloss am Zusammenfluss von Aare, Reuss und Limmat. Die Altstadt mit dem Breituuquartier und die Verkehrsgunst am Bahnhof Brugg machen die kurze Fahrt nach Boniswil zu einer entspannten Auszeit vom hektischen Werkalltag.",
+    typischeKunden: "Vielbeschäftigte Pendlerinnen aus Brugg und dem Bahnhofsumfeld, die sich bewusst eine kleine Auszeit vom Alltag gönnen möchten.",
     name: "Brugg",
     fahrzeit: "ca. 30 Minuten",
     metaTitle: "Gesichtsbehandlung Brugg, Daniela Beauty World",
@@ -130,6 +142,8 @@ export const regionen = [
   },
   {
     slug: "rheinfelden",
+    lokaleBesonderheiten: "Rheinfelden am Rhein ist von den Salinen, der Rheinpromenade und dem fruchtbaren Fricktal geprägt. Der Grenzort verbindet Schweizer Lebensqualität mit regionaler Genusskultur, und die Fahrt durch das vorderaargauische Hügelland nach Boniswil lohnt sich für individuelle Pflege.",
+    typischeKunden: "Kundinnen aus Rheinfelden und dem Fricktal, die Genuss, Ruhe und hochwertige Hautpflege bewusst miteinander verbinden möchten.",
     name: "Rheinfelden",
     fahrzeit: "ca. 35 Minuten",
     metaTitle: "Gesichtsbehandlung Rheinfelden, Daniela Beauty World",
@@ -151,6 +165,8 @@ export const regionen = [
   },
   {
     slug: "muri",
+    lokaleBesonderheiten: "Muri mit seiner barocken Klosterkirche und der klösterlichen Tradition strahlt Ruhe aus. Das Freiamt um Muri ist ländlich geprägt, die Bünz bildet das zentrale Tal, und die beschauliche Anfahrt nach Boniswil passt zu einem entspannten Pflegeritual.",
+    typischeKunden: "Ruhesuchende Kundinnen aus Muri und dem umliegenden Freiamt, die Entschleunigung und sorgsame Hautpflege schätzen.",
     name: "Muri",
     fahrzeit: "ca. 25 Minuten",
     metaTitle: "Gesichtsbehandlung Muri, Daniela Beauty World",
@@ -172,6 +188,8 @@ export const regionen = [
   },
   {
     slug: "bremgarten",
+    lokaleBesonderheiten: "Bremgarten mit seiner mittelalterlichen Altstadt an der Reuss und dem bekannten Weihnachtsmarkt verbindet Tradition mit Erholung. Die historische Reussbrücke ist Wahrzeichen der Stadt, und die kurze, gut planbare Fahrt nach Boniswil lädt zu regelmässigen Besuchen ein.",
+    typischeKunden: "Kundinnen aus Bremgarten und den Reussgemeinden, die historischen Charme und persönliche Pflege in einer Auszeit geniessen möchten.",
     name: "Bremgarten",
     fahrzeit: "ca. 25 Minuten",
     metaTitle: "Gesichtsbehandlung Bremgarten, Daniela Beauty World",
@@ -193,6 +211,8 @@ export const regionen = [
   },
   {
     slug: "suhr",
+    lokaleBesonderheiten: "Suhr grenzt direkt an Aarau und ist als Einkaufsdrehscheibe der Region bekannt. Das Suhrental ist stark gewerblich geprägt, und der nahtlose Übergang in den Aarauer Suhrgürtel macht Boniswil für Suhrerinnen zur schnell erreichbaren Pflegestätte.",
+    typischeKunden: "Pendlerinnen und berufstätige Frauen aus Suhr und dem Aarau-Suhrgürtel, die kurze Wege und unkomplizierte Terminierung schätzen.",
     name: "Suhr",
     fahrzeit: "ca. 20 Minuten",
     metaTitle: "Gesichtsbehandlung Suhr, Daniela Beauty World",

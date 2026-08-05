@@ -142,6 +142,23 @@ export default function GesichtsbehandlungRegion() {
           </div>
         </section>
 
+        {/* Lokale Besonderheiten */}
+        <section className="py-20 bg-rose-cream">
+          <div className="max-w-3xl mx-auto px-5 md:px-8">
+            <ScrollReveal>
+              <h2 className="font-heading font-bold text-rose-ink text-3xl md:text-4xl mb-6 text-center">
+                Was {data.name} auszeichnet
+              </h2>
+              <p className="text-rose-ink/70 text-base leading-[1.8] mb-6">{data.lokaleBesonderheiten}</p>
+              <div className="bg-white rounded-lg p-6 border border-rose-nude">
+                <p className="text-rose-ink/70 text-sm leading-[1.7]">
+                  <strong className="text-rose-ink font-heading">Typische Kundinnen aus {data.name}:</strong> {data.typischeKunden}
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
         {/* Kontaktblock */}
         <section id="contact" className="py-20 bg-rose-cream">
           <div className="max-w-3xl mx-auto px-5 md:px-8">
