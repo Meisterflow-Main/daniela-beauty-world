@@ -9,7 +9,7 @@ const REELS = [
     title: "Eindrücke aus dem Kosmetikstudio",
   },
   {
-    src: "https://media.base44.com/videos/public/6a60cb30ba3b3938399f5ac5/197559031_SCHMERZFREIEHAARENTFERNUNGMITDEMNEUETECHNOLOGIEDIODENLASERHaarfreiindenSommer-K.mp4",
+    src: "https://media.base44.com/videos/public/6a60cb30ba3b3938399f5ac5/1e8c470f1_WhatsAppVideo2026-08-05at111947.mp4",
     title: "Schmerzfreie Haarentfernung mit Diodenlaser",
   },
   {
