@@ -24,12 +24,12 @@ export default function Gallery() {
           </h2>
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
           {galleryImages.map((src, i) => (
             <ScrollReveal
               key={i}
               delay={(i % 4) * 100}
-              className={`group relative overflow-hidden rounded-lg cursor-pointer ${i === 0 || i === 3 ? "md:col-span-2 md:row-span-2 aspect-square md:aspect-auto" : "aspect-square"}`}
+              className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square"
             >
               <img
                 src={src}

@@ -19,7 +19,7 @@ export default function Hero() {
           <span className="inline-block text-rose-light text-sm font-heading font-medium tracking-[0.2em] uppercase mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
             Kosmetikstudio · Boniswil
           </span>
-          <h1 className="font-heading font-bold text-white text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
+          <h1 className="font-heading font-bold text-white text-5xl sm:text-6xl lg:text-7xl leading-[1.05] mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
             Daniela<br />
             <span className="text-gradient-rose">Beauty World</span>
           </h1>
