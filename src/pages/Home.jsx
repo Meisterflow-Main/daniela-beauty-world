@@ -7,6 +7,8 @@ import Reels from "@/components/sections/Reels";
 import Welcome from "@/components/sections/Welcome";
 import Treatments from "@/components/sections/Treatments";
 import Prices from "@/components/sections/Prices";
+import PricesKoerper from "@/components/sections/PricesKoerper";
+import PricesZaehne from "@/components/sections/PricesZaehne";
 import Gallery from "@/components/sections/Gallery";
 import About from "@/components/sections/About";
 import Testimonials from "@/components/sections/Testimonials";
@@ -23,6 +25,8 @@ export default function Home() {
         <Welcome />
         <Treatments />
         <Prices />
+        <PricesKoerper />
+        <PricesZaehne />
         <Gallery />
         <About />
         <Testimonials />

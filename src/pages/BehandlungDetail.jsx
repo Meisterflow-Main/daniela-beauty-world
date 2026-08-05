@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Check, Clock, Sparkles, ArrowRight, ChevronRight } from "lucide-react";
+import { Check, Sparkles, ArrowRight, ChevronRight } from "lucide-react";
 import {
   Accordion,
   AccordionItem,
@@ -12,10 +12,14 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import CookieBanner from "@/components/CookieBanner";
 import ScrollReveal from "@/components/ScrollReveal";
+import PricingBlock from "@/components/PricingBlock";
 import {
-  gesichtsbehandlungen,
-  getGesichtsbehandlungBySlug,
-} from "@/data/gesichtsbehandlungen";
+  alleBehandlungen,
+  getBehandlungBySlug,
+  categoryLabels,
+  categoryEyebrows,
+  pricesAnchors,
+} from "@/data/behandlungenIndex";
 
 function setMeta(name, content) {
   let el = document.querySelector(`meta[name="${name}"]`);
@@ -27,9 +31,18 @@ function setMeta(name, content) {
   el.setAttribute("content", content);
 }
 
+function priceLine(b) {
+  if (b.pricing && b.pricing.length > 0) {
+    const first = b.pricing.find((p) => p.value);
+    return first ? first.value : b.shortName;
+  }
+  if (b.options && b.options.length > 0) return b.options[0].split("–")[0].trim();
+  return `${b.price} – ${b.duration}`;
+}
+
 export default function BehandlungDetail() {
   const { slug } = useParams();
-  const behandlung = getGesichtsbehandlungBySlug(slug);
+  const behandlung = getBehandlungBySlug(slug);
 
   useEffect(() => {
     if (behandlung) {
@@ -57,9 +70,16 @@ export default function BehandlungDetail() {
     );
   }
 
-  const related = gesichtsbehandlungen.filter((b) => b.slug !== behandlung.slug);
-  const priceLine = (b) =>
-    b.options.length > 0 ? b.options[0].split("–")[0].trim() : `${b.price} – ${b.duration}`;
+  const eyebrow = categoryEyebrows[behandlung.category] || "Behandlung";
+  const categoryLabel = categoryLabels[behandlung.category] || "Behandlungen";
+  const anchor = pricesAnchors[behandlung.category] || "#preise";
+
+  const sameCategory = alleBehandlungen.filter(
+    (b) => b.category === behandlung.category && b.slug !== behandlung.slug
+  );
+  const related = sameCategory.length
+    ? sameCategory
+    : alleBehandlungen.filter((b) => b.slug !== behandlung.slug);
 
   return (
     <>
@@ -70,7 +90,7 @@ export default function BehandlungDetail() {
           <nav className="flex items-center gap-2 text-sm text-rose-ink/60">
             <Link to="/" className="hover:text-rose-gold transition-colors">Startseite</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <a href="/#preise" className="hover:text-rose-gold transition-colors">Gesicht</a>
+            <a href={`/${anchor}`} className="hover:text-rose-gold transition-colors">{behandlung.category}</a>
             <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-rose-ink/80">{behandlung.shortName}</span>
           </nav>
@@ -81,7 +101,7 @@ export default function BehandlungDetail() {
           <div className="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
               <span className="inline-flex items-center gap-2 text-rose-gold text-sm font-heading font-medium tracking-[0.15em] uppercase mb-5">
-                <Sparkles className="w-4 h-4" /> Gesichtsbehandlung in Boniswil
+                <Sparkles className="w-4 h-4" /> {eyebrow} in Boniswil
               </span>
               <h1 className="font-heading font-bold text-rose-ink text-4xl md:text-5xl leading-tight mb-6">
                 {behandlung.name}
@@ -91,34 +111,7 @@ export default function BehandlungDetail() {
               </p>
 
               <div className="bg-rose-cream rounded-lg p-6 border border-rose-nude mb-8">
-                {behandlung.options.length > 0 ? (
-                  <div className="space-y-3">
-                    {behandlung.options.map((opt) => (
-                      <p key={opt} className="font-heading font-semibold text-rose-ink text-sm md:text-base">
-                        {opt}
-                      </p>
-                    ))}
-                  </div>
-                ) : (
-                  <>
-                    <p className="font-heading font-bold text-rose-gold text-3xl mb-2">
-                      {behandlung.price}
-                    </p>
-                    <p className="flex items-center gap-2 text-rose-ink/70 text-sm">
-                      <Clock className="w-4 h-4" /> {behandlung.duration}
-                    </p>
-                    {(behandlung.kuren.length > 0 || behandlung.addons.length > 0) && (
-                      <div className="mt-4 pt-4 border-t border-rose-nude space-y-1.5">
-                        {behandlung.kuren.map((k) => (
-                          <p key={k} className="text-rose-ink/75 text-sm font-medium">{k}</p>
-                        ))}
-                        {behandlung.addons.map((a) => (
-                          <p key={a} className="text-rose-ink/75 text-sm font-medium">{a}</p>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                )}
+                <PricingBlock behandlung={behandlung} />
               </div>
 
               <a
@@ -190,7 +183,7 @@ export default function BehandlungDetail() {
                 So läuft deine Behandlung ab
               </h2>
               <p className="text-rose-ink/70 text-base leading-[1.7]">
-                In vier entspannten Schritten zu sichtbaren Ergebnissen.
+                In entspannten Schritten zu sichtbaren Ergebnissen.
               </p>
             </ScrollReveal>
             <div className="space-y-6">
@@ -241,7 +234,7 @@ export default function BehandlungDetail() {
           <div className="max-w-7xl mx-auto px-5 md:px-8">
             <ScrollReveal className="text-center mb-12">
               <h2 className="font-heading font-bold text-rose-ink text-3xl md:text-4xl mb-4">
-                Weitere Gesichtsbehandlungen
+                Weitere {categoryLabel}
               </h2>
               <p className="text-rose-ink/70 text-base">Entdecke weitere Angebote von Daniela Beauty World.</p>
             </ScrollReveal>
