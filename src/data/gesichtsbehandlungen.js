@@ -250,7 +250,7 @@ export const gesichtsbehandlungen = [
     kuren: ["Ab 4 Kuren: 149 CHF"],
     addons: [],
     options: [],
-    image: "https://media.base44.com/images/public/6a60cb30ba3b3938399f5ac5/af9f7cdfb_WhatsAppImage2026-08-06at073927.jpg",
+    image: "https://media.base44.com/images/public/6a60cb30ba3b3938399f5ac5/9e2a6e54c_WhatsAppImage2026-08-06at073927.jpg",
     intro:
       "Das Bio Face Lifting ist eine natürliche Gesichtsstraffung für verbesserte Spannkraft, klare Konturen und mehr Ausstrahlung. Die Haut wirkt sichtbar gefestigt, geglättet und revitalisiert: ganz ohne operative Eingriffe.",
     about:
