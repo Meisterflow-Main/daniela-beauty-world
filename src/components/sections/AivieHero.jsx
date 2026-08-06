@@ -35,7 +35,8 @@ export default function AivieHero() {
       <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-rose-nude/50 blur-3xl" />
       <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-8 w-full grid lg:grid-cols-2 gap-12 items-center">
         <div>
-        <h1 className="font-heading font-bold text-rose-ink text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-4">
+          <span className="inline-block bg-rose-gold text-white text-xs font-heading font-bold tracking-[0.2em] uppercase px-4 py-2 rounded-sm mb-6">Jetzt erhältlich</span>
+          <h1 className="font-heading font-bold text-rose-ink text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-4">
             {aivieBrand.name}
           </h1>
           <p className="text-rose-deep text-sm font-heading tracking-[0.3em] uppercase mb-3">{aivieBrand.sub}</p>
