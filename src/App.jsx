@@ -20,6 +20,7 @@ import Faq from '@/pages/Faq';
 import Blog from '@/pages/Blog';
 import BlogPost from '@/pages/BlogPost';
 import AivieLaunch from '@/pages/AivieLaunch';
+import Bewertung from '@/pages/Bewertung';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -63,6 +64,7 @@ const AuthenticatedApp = () => {
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/aivie" element={<AivieLaunch />} />
+      <Route path="/Bewertung" element={<Bewertung />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
