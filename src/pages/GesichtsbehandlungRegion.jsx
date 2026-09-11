@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { getRegionBySlug, regionen } from "@/data/gesichtsbehandlungRegionen";
 import { Phone, Mail, MapPin, Clock, ArrowRight, Check, Star, ExternalLink } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { setCanonical } from "@/lib/seo";
 
 const treatments = [
   { title: "PRX-Therapie", slug: "prx-therapie", desc: "Nadelfreies Anti-Aging, das die Haut strafft und revitalisiert." },
@@ -28,8 +29,15 @@ export default function GesichtsbehandlungRegion() {
   useEffect(() => {
     if (data) {
       document.title = data.metaTitle;
-      let meta = document.querySelector('meta[name="description"]');
-      if (meta) meta.setAttribute("content", data.metaDescription);
+      const set = (sel, val) => {
+        let el = document.querySelector(sel);
+        if (el) el.setAttribute("content", val);
+      };
+      set('meta[name="description"]', data.metaDescription);
+      set('meta[property="og:title"]', data.metaTitle);
+      set('meta[property="og:description"]', data.metaDescription);
+      set('meta[property="og:url"]', `https://danielabeauty.ch/gesichtsbehandlung/${data.slug}`);
+      setCanonical(`/gesichtsbehandlung/${data.slug}`);
     }
   }, [data]);
 

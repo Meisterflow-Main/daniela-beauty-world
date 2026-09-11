@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Star, CheckCircle, Loader2, AlertCircle, ExternalLink } from "lucide-react";
+import { useSeo } from "@/hooks/useSeo";
 
 const WEBHOOK_URL = "https://app.meisterflow.ch/api/webhooks/enquiries/a902bb23d7e98901900e3750083b670344a14683633ae15f";
 const GOOGLE_REVIEW_LINK = "https://www.google.com/search?q=daniela+bauty+world&oq=daniela+bauty+world&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yBwgCEAAY7wUyCggDEAAYgAQYogQyBwgEEAAY7wUyBwgFEAAY7wXSAQgzNzcwajBqN6gCALACAA&sourceid=chrome&source=chrome.ob&ie=UTF-8";
@@ -14,6 +15,11 @@ const questions = [
 ];
 
 export default function AuftragBewerten() {
+  useSeo({
+    title: "Auftrag bewerten | Daniela Beauty World",
+    description: "Bewerten Sie Ihren Besuch bei Daniela Beauty World in Boniswil. Kurz drei Fragen beantworten und Sterne vergeben.",
+    path: "/auftrag-bewerten",
+  });
   const [step, setStep] = useState(1);
   const [answers, setAnswers] = useState({});
   const [rating, setRating] = useState(0);

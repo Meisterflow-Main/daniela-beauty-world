@@ -10,6 +10,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import BlogCard from "@/components/BlogCard";
 import BlogSidebar from "@/components/BlogSidebar";
 import ScrollReveal from "@/components/ScrollReveal";
+import { setCanonical } from "@/lib/seo";
 
 function slugify(s) {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -30,6 +31,9 @@ export default function BlogPost() {
     if (og) og.setAttribute("content", post.seo.title);
     let ogd = document.querySelector('meta[property="og:description"]');
     if (ogd) ogd.setAttribute("content", post.seo.description);
+    let ogu = document.querySelector('meta[property="og:url"]');
+    if (ogu) ogu.setAttribute("content", `https://danielabeauty.ch/blog/${post.slug}`);
+    setCanonical(`/blog/${post.slug}`);
 
     const schema = {
       "@context": "https://schema.org",

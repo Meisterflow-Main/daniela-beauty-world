@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useSeo } from "@/hooks/useSeo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -9,12 +9,11 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { globalFaq } from "@/data/globalFaq";
 
 export default function Faq() {
-  useEffect(() => {
-    document.title = "FAQ | Daniela Beauty World";
-    const m = document.querySelector('meta[name="description"]');
-    if (m) m.setAttribute("content", "Häufige Fragen zu Behandlungen, Terminen, Anfahrt und Geschenkgutscheinen bei Daniela Beauty World in Boniswil.");
-    window.scrollTo({ top: 0 });
-  }, []);
+  useSeo({
+    title: "FAQ | Daniela Beauty World",
+    description: "Häufige Fragen zu Behandlungen, Terminen, Anfahrt und Geschenkgutscheinen bei Daniela Beauty World in Boniswil.",
+    path: "/faq",
+  });
 
   return (
     <>

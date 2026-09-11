@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useSeo } from "@/hooks/useSeo";
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -10,12 +10,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { regionen } from "@/data/gesichtsbehandlungRegionen";
 
 export default function Regionen() {
-  useEffect(() => {
-    document.title = "Regionen | Daniela Beauty World Boniswil";
-    const m = document.querySelector('meta[name="description"]');
-    if (m) m.setAttribute("content", "Gesichtsbehandlungen für Kundinnen aus Aarau, Lenzburg, Baden, Wohlen und weiteren Orten. Anfahrtszeiten und Infos zu allen Regionen auf einen Blick.");
-    window.scrollTo({ top: 0 });
-  }, []);
+  useSeo({
+    title: "Regionen | Daniela Beauty World Boniswil",
+    description: "Gesichtsbehandlungen für Kundinnen aus Aarau, Lenzburg, Baden, Wohlen und weiteren Orten. Anfahrtszeiten und Infos zu allen Regionen auf einen Blick.",
+    path: "/regionen",
+  });
 
   return (
     <>

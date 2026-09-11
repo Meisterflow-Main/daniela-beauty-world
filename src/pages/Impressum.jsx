@@ -1,8 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import { useSeo } from "@/hooks/useSeo";
 
 export default function Impressum() {
+  useSeo({
+    title: "Impressum | Daniela Beauty World",
+    description: "Impressum von Daniela Beauty World, Boniswil – Angaben gemäss Art. 17 DSGVO / revDSG.",
+    path: "/impressum",
+  });
   return (
     <>
       <Navbar />

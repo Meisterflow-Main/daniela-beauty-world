@@ -2,15 +2,17 @@ import { Star, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
-import { useEffect } from "react";
+import { useSeo } from "@/hooks/useSeo";
 
 const GOOGLE_REVIEW_LINK =
   "https://search.google.com/local/writereview?placeid=ChIJo16hKbsXkEcRUy7qX8cglAs&utm_source";
 
 export default function Bewertung() {
-  useEffect(() => {
-    document.title = "Bewertung abgeben | Daniela Beauty World";
-  }, []);
+  useSeo({
+    title: "Bewertung abgeben | Daniela Beauty World",
+    description: "Gib deine Bewertung für Daniela Beauty World in Boniswil ab. Mit einem Klick weiter zu Google – es dauert keine Minute.",
+    path: "/bewertung",
+  });
 
   return (
     <>

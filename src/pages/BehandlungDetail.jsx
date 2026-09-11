@@ -22,12 +22,23 @@ import {
 } from "@/data/behandlungenIndex";
 import { regionen } from "@/data/gesichtsbehandlungRegionen";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { setCanonical } from "@/lib/seo";
 
 function setMeta(name, content) {
   let el = document.querySelector(`meta[name="${name}"]`);
   if (!el) {
     el = document.createElement("meta");
     el.setAttribute("name", name);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("content", content);
+}
+
+function setProp(property, content) {
+  let el = document.querySelector(`meta[property="${property}"]`);
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute("property", property);
     document.head.appendChild(el);
   }
   el.setAttribute("content", content);
@@ -50,6 +61,10 @@ export default function BehandlungDetail() {
     if (behandlung) {
       document.title = behandlung.seo.title;
       setMeta("description", behandlung.seo.description);
+      setProp("og:title", behandlung.seo.title);
+      setProp("og:description", behandlung.seo.description);
+      setProp("og:url", `https://danielabeauty.ch/behandlung/${behandlung.slug}`);
+      setCanonical(`/behandlung/${behandlung.slug}`);
     }
     window.scrollTo({ top: 0 });
   }, [behandlung]);

@@ -14,8 +14,14 @@ import About from "@/components/sections/About";
 import Testimonials from "@/components/sections/Testimonials";
 import Values from "@/components/sections/Values";
 import Contact from "@/components/sections/Contact";
+import { useSeo } from "@/hooks/useSeo";
 
 export default function Home() {
+  useSeo({
+    title: "Daniela Beauty World – Kosmetikstudio in Boniswil | Deine Schönheit in besten Händen",
+    description: "Daniela Beauty World in Boniswil – Dein Kosmetikstudio für individuelle Schönheit und Wohlbefinden. Gesichtsbehandlungen, Körperformung, Zahnbleaching & mehr. Jetzt Termin sichern!",
+    path: "/",
+  });
   return (
     <>
       <Navbar />

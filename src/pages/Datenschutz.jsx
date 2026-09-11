@@ -1,8 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import { useSeo } from "@/hooks/useSeo";
 
 export default function Datenschutz() {
+  useSeo({
+    title: "Datenschutzerklärung | Daniela Beauty World",
+    description: "Datenschutzerklärung von Daniela Beauty World in Boniswil: Datenschutz, Cookies und Ihre Rechte.",
+    path: "/datenschutz",
+  });
   return (
     <>
       <Navbar />

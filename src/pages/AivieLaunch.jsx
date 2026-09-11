@@ -7,8 +7,14 @@ import AivieIntro from "@/components/sections/AivieIntro";
 import AivieIngredients from "@/components/sections/AivieIngredients";
 import AivieVideo from "@/components/sections/AivieVideo";
 import AivieNewsletter from "@/components/sections/AivieNewsletter";
+import { useSeo } from "@/hooks/useSeo";
 
 export default function AivieLaunch() {
+  useSeo({
+    title: "AIVIE – Elevated AI Cream | Daniela Beauty World",
+    description: "AIVIE – The Algorithm of Youth. Elevated AI Cream mit Niacinamide, Hexapeptid-8 und Ectoin von Daniela Beauty World.",
+    path: "/aivie",
+  });
   return (
     <>
       <Navbar />

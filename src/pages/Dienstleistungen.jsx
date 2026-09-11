@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useSeo } from "@/hooks/useSeo";
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -23,12 +23,11 @@ function priceLine(b) {
 const categories = ["Gesicht", "Körper", "Zähne"];
 
 export default function Dienstleistungen() {
-  useEffect(() => {
-    document.title = "Dienstleistungen | Daniela Beauty World Boniswil";
-    const m = document.querySelector('meta[name="description"]');
-    if (m) m.setAttribute("content", "Alle Behandlungen von Daniela Beauty World: Gesichtsbehandlungen, Körperformung und Zahnbleaching in Boniswil. Jetzt Termin vereinbaren.");
-    window.scrollTo({ top: 0 });
-  }, []);
+  useSeo({
+    title: "Dienstleistungen | Daniela Beauty World Boniswil",
+    description: "Alle Behandlungen von Daniela Beauty World: Gesichtsbehandlungen, Körperformung und Zahnbleaching in Boniswil. Jetzt Termin vereinbaren.",
+    path: "/dienstleistungen",
+  });
 
   return (
     <>

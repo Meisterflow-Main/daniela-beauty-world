@@ -7,8 +7,14 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ScrollReveal from "@/components/ScrollReveal";
+import { useSeo } from "@/hooks/useSeo";
 
 export default function Blog() {
+  useSeo({
+    title: "Blog | Daniela Beauty World Boniswil",
+    description: "Blog von Daniela Beauty World: Ratgeber zu Gesichtsbehandlungen, Hautpflege, Microneedling, PRX-Therapie und VIP Zahnbleaching in Boniswil.",
+    path: "/blog",
+  });
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("Alle");
   const [sort, setSort] = useState("neu");

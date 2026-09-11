@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useSeo } from "@/hooks/useSeo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -7,12 +7,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import Contact from "@/components/sections/Contact";
 
 export default function Kontakt() {
-  useEffect(() => {
-    document.title = "Kontakt | Daniela Beauty World Boniswil";
-    const m = document.querySelector('meta[name="description"]');
-    if (m) m.setAttribute("content", "Kontakt zu Daniela Beauty World in Boniswil: telefonisch, per WhatsApp oder über das Kontaktformular. Jetzt Termin vereinbaren.");
-    window.scrollTo({ top: 0 });
-  }, []);
+  useSeo({
+    title: "Kontakt | Daniela Beauty World Boniswil",
+    description: "Kontakt zu Daniela Beauty World in Boniswil: telefonisch, per WhatsApp oder über das Kontaktformular. Jetzt Termin vereinbaren.",
+    path: "/kontakt",
+  });
 
   return (
     <>

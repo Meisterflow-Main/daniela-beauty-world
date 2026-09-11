@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://danielabeauty.ch/</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://danielabeauty.ch/dienstleistungen</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://danielabeauty.ch/regionen</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://danielabeauty.ch/ueber-uns</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://danielabeauty.ch/kontakt</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://danielabeauty.ch/faq</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://danielabeauty.ch/impressum</loc><lastmod>2026-08-05</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://danielabeauty.ch/datenschutz</loc><lastmod>2026-08-05</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://danielabeauty.ch/auftrag-bewerten</loc><lastmod>2026-08-05</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <!-- Blog -->
-  <url><loc>https://danielabeauty.ch/blog</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://danielabeauty.ch/blog/hautpflege-nach-gesichtsbehandlung</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://danielabeauty.ch/blog/microneedling-ablauf-und-ergebnisse</loc><lastmod>2026-07-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://danielabeauty.ch/blog/prx-therapie-wirkung</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://danielabeauty.ch/blog/kosmetikstudio-boniswil-aargau</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://danielabeauty.ch/blog/zahnbleaching-haeufige-fragen</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://danielabeauty.ch/blog/em-slim-korperformung</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <!-- Gesichtsbehandlungen -->
-  <url><loc>https://danielabeauty.ch/behandlung/mikrodermabrasion</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/behandlung/bio-peelx-microneedling</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/behandlung/microneedling</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/behandlung/fruchtsaeurepeeling</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/behandlung/prx-therapie</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/behandlung/aqua-star-hydrofacial</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/behandlung/bio-face-lifting</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/behandlung/hi-tech-anti-aging</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/behandlung/collagenfadenlifting</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <!-- Körperbehandlungen -->
-  <url><loc>https://danielabeauty.ch/behandlung/em-slim</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <!-- Zahnbehandlungen -->
-  <url><loc>https://danielabeauty.ch/behandlung/vip-zahnbleaching</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <!-- Regionen / Money Pages -->
-  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/aarau</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/lenzburg</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/baden</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/wohlen</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/zofingen</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/brugg</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/rheinfelden</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/muri</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/bremgarten</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/suhr</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/</loc><priority>1.0</priority></url>
+  <url><loc>https://danielabeauty.ch/dienstleistungen</loc><priority>0.9</priority></url>
+  <url><loc>https://danielabeauty.ch/regionen</loc><priority>0.9</priority></url>
+  <url><loc>https://danielabeauty.ch/ueber-uns</loc><priority>0.7</priority></url>
+  <url><loc>https://danielabeauty.ch/kontakt</loc><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/faq</loc><priority>0.7</priority></url>
+  <url><loc>https://danielabeauty.ch/blog</loc><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/aivie</loc><priority>0.6</priority></url>
+  <url><loc>https://danielabeauty.ch/bewertung</loc><priority>0.4</priority></url>
+  <url><loc>https://danielabeauty.ch/impressum</loc><priority>0.3</priority></url>
+  <url><loc>https://danielabeauty.ch/datenschutz</loc><priority>0.3</priority></url>
+  <url><loc>https://danielabeauty.ch/auftrag-bewerten</loc><priority>0.3</priority></url>
+
+  <url><loc>https://danielabeauty.ch/behandlung/mikrodermabrasion</loc><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/behandlung/bio-peelx-microneedling</loc><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/behandlung/microneedling</loc><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/behandlung/fruchtsaeurepeeling</loc><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/behandlung/prx-therapie</loc><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/behandlung/aqua-star-hydrofacial</loc><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/behandlung/bio-face-lifting</loc><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/behandlung/hi-tech-anti-aging</loc><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/behandlung/collagenfadenlifting</loc><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/behandlung/em-slim</loc><priority>0.8</priority></url>
+  <url><loc>https://danielabeauty.ch/behandlung/vip-zahnbleaching</loc><priority>0.8</priority></url>
+
+  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/aarau</loc><priority>0.7</priority></url>
+  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/lenzburg</loc><priority>0.7</priority></url>
+  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/baden</loc><priority>0.7</priority></url>
+  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/wohlen</loc><priority>0.7</priority></url>
+  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/zofingen</loc><priority>0.7</priority></url>
+  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/brugg</loc><priority>0.7</priority></url>
+  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/rheinfelden</loc><priority>0.7</priority></url>
+  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/muri</loc><priority>0.7</priority></url>
+  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/bremgarten</loc><priority>0.7</priority></url>
+  <url><loc>https://danielabeauty.ch/gesichtsbehandlung/suhr</loc><priority>0.7</priority></url>
+
+  <url><loc>https://danielabeauty.ch/blog/hautpflege-nach-gesichtsbehandlung</loc><priority>0.6</priority></url>
+  <url><loc>https://danielabeauty.ch/blog/microneedling-ablauf-und-ergebnisse</loc><priority>0.6</priority></url>
+  <url><loc>https://danielabeauty.ch/blog/prx-therapie-wirkung</loc><priority>0.6</priority></url>
+  <url><loc>https://danielabeauty.ch/blog/kosmetikstudio-boniswil-aargau</loc><priority>0.6</priority></url>
+  <url><loc>https://danielabeauty.ch/blog/zahnbleaching-haeufige-fragen</loc><priority>0.6</priority></url>
+  <url><loc>https://danielabeauty.ch/blog/em-slim-korperformung</loc><priority>0.6</priority></url>
 </urlset>
